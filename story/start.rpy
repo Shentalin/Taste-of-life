@@ -73,7 +73,7 @@ label tol_start:
     hide text
     "John stared thoughtfully at the ceiling."
     
-    show john a_13
+    show john a_0
     "Invisibility spell working as intended."
 
     show john a_15
@@ -82,61 +82,292 @@ label tol_start:
     "Suddenly, a loud smack echoed in the room, indicating that something small and soft had been forcefully slammed against the ceiling."
 
     hide text
-    show john a_22
-    "Levitation spell needs improvement..."
+    show john a_16
+    think "Levitation spell needs improvement..."
     
-    show john a_2
+    show john a_2 at faceright
+    show john at centerright with move
     "John started noting things down in his book."
 
-# A knock on the door interrupted John's thoughts. "Honey, are you busy? Can I come in?" his mother's voice called out. 
-# John replied, "Yes, mom, come in."
+    play sound sfx_knock
+    show john at faceleft
+    "A knock on the door interrupted John's thoughts."
+    sandra "Honey, are you busy? Can I come in?"
 
-# As naked Sayaka Sato entered the room, the frog croaked once again. Sayaka looked up at the ceiling in surprise. 
-# Suddenly, with a glitch effect, she transformed into Sandra Davis, dressed casually, for a few moments before transforming back. John made another note, mumbling, "Illusion spell needs a stability upgrade." 
-# Sayaka confusingly asked, "What?" to which John quickly replied, "It's nothing. What do you want?"
+    show john a_13
+    john "Yes, mom, come in."
 
-# "Dear, you've been sitting here all day," his mom expressed concern. "I'm worried you even missed lunch. Do you want me to bring you a snack?" 
-# John chuckled and replied, "Oh, come on, it's not that late. Thanks, mom, but I'm not hungry."
+    show john a_0
+    body sandra sayaka nude
+    show sandra a_1 at left with easeinleft
 
-# The croaking sound echoed in the room. "Is there a frog?" Sandra (Sayaka) asked, her curiosity piqued. 
-# John nodded and replied, "Yep." Sandra's gaze shifted upwards towards the ceiling. "But there..." she started, before John interrupted, "Of course, it's invisible!"
+    show john a_15
+    show sandra a_27
+    show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
+        xpos 0.3 ypos 0.05
+    "As a naked Sayaka Sato entered the room, the frog croaked once again."
+    
+    hide text
+    "Sayaka looked up at the ceiling in surprise."
 
-# Sandra's (Sayaka's) eyes widened in surprise. "Why, for the love of God, is there an invisible frog on the ceiling in my house?!" 
-# After her question, Sandra (Sayaka) froze in place, as if she were listening to the sound of it. "What did I just say? I mean, that's, uh..." she trailed off, still trying to understand the situation. 
-# John started to panic. "Mom, it's okay," he reassured. "Remember, everything that's happening in my room is (fine(bold). 
-# The frog is like that because I tried a levitation spell on it." 
-# Sandra, still bewildered, replied, "Oh, (fine(italics))... but that's not what I mentioned! Where did you even get it?"
+    # Since im using Sandra with Sayaka's body, its only fair that Sayaka has Sandra's body for the glitch effect
+    body sayaka sandra suit
+    show sayaka a_0 at left, faceright
+    show sayaka at Glitch(), left
+    "Suddenly, with a glitch effect, she transformed into Sandra Davis, dressed casually, for a few moments before transforming back."
+    
+    show john a_16 at faceright
+    hide sayaka with dissolve
+    "John made another note, mumbling to himself."
+    
+    show john a_22
+    john "Illusion spell needs a stability upgrade."
 
-# "Ah, this is a flower from Holly's room," John exclaimed, his confidence evident. 
-# Sandra looked startled and asked, "What?" 
-# John explained proudly, "I turned Holly's flower into a frog, then levitated it, and finally made it invisible. It's easy!" 
-# Sandra's expression turned concerned as she responded, "But dear, Holly loves this flower. Why did you do such things to it? You can't just..." 
-# John interjected firmly, "Mom, I can do anything! Especially when it's (necessary(bold))!"
+    show john a_16
+    show sandra a_29
+    "What?"
+    
+    show sandra a_30
+    show john a_22 at faceleft
+    john "It's nothing. What do you want?"
 
-# Sandra (Sayaka) spaced out for a moment, her thoughts processing. "Yes, dear, this is (necessary(italics))," she agreed. 
-# With a glitch effect, she transformed back into Sandra Davis before transforming once again, this time into naked Yui Yamashita.
+    show sandra b_8
+    sandra "Dear, you've been sitting here all day, I'm worried you even missed lunch. Do you want me to bring you a snack?"
 
-# John clearly hadn't expected this. When he saw Yui's face, he flinched slightly and looked away.
-# Then he made an subtle movement with his hand and Yui's image changed to Connie Williams.
+    show sandra b_11
+    show john a_12
+    "John chuckled."
+    
+    show john a_13
+    john "Oh, come on, it's not that late. Thanks, mom, but I'm not hungry."
 
-# John remarked, "Huh, I see the pattern." Sandra (Connie) looked confused and asked, "Ehm?" John quickly dismissed it, saying, "Don't pay attention."
+    show john a_15
+    show sandra b_27
+    show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
+        xpos 0.3 ypos 0.05
+    "The croaking sound echoed in the room again."
+    
+    hide text
+    show sandra b_28
+    sandra "Is there a frog in your room?"
 
-# "Son, you're scaring me. What's so important that you're not even going out to eat?" Sandra (Connie) asked, her concern growing. 
-# John stood tall, his voice filled with self-confidence as he responded, "Well, for the past week, I've been passionately working on a special spell. It's a healing spell that I specifically created for Suna." 
-# Connie's eyes softened as she realized, "Oh, it's because of her condition. You believe you can cure her?" 
-# The self-assured tone in John's voice was evident as he confidently replied, "I turned a mere house plant into an invisible flying frog. Of course, I do. Just imagine the sheer joy and happiness she will experience when I bring an end to her illness." 
-# A smile formed on Connie's face as she playfully teased, "If that's the case, maybe we'll discuss your next bold move, my bravest knight of the Round Table, for winning her heart?"
+    show sandra b_27
+    show john a_13
+    john "Yep."
+    
+    show john a_0 
+    show sandra a_0
+    "Sandra's gaze shifted upwards towards the ceiling."
+    
+    show sandra a_8
+    "But there's-"
+    
+    show sandra a_27
+    show john a_21
+    with hpunch
+    john "Of course, it's invisible!"
 
-# "Mom, why do you always bring that up? Your son is on the brink of outshining modern medicine by discovering a cure for a disease like hers. You should be in awe!" John confidently proclaimed. 
-# Sandra (Connie) raised an eyebrow and replied, "Oh, is that all there is to it? I must say, my son's ambitions are truly limitless!"
+    show john a_2
+    "Sandra's (Sayaka's) eyes widened in surprise."
+    
+    show sandra a_7
+    sandra "Why, for the love of God, is there an invisible frog on the ceiling in my house?!"
 
-# John's face turned embarrassed as his mother teased him. "Mom, it's not... Ahem... It's for...," he stammered, struggling to explain himself.
-# "I see, Sir Lancelot, that you are ready to defeat a dragon, but not to kneel before a lady," Sandra (Connie) playfully remarked.
-# "Mom, stoooop," John pleaded. "You know what? You won. I'll go and eat something. Just spare me this talk."
-# "Yay," Sandra (Connie) exclaimed with a playful tone. "It's not so difficult after all, is it?"
+    show sandra a_30
+    "After her question, Sandra (Sayaka) froze in place, as if she were listening to the sound of it."
+    
+    show sandra b_6
+    sandra "What did I just say? I mean, that's, uh..."
+    
+    show sandra b_5
+    "She trailed off, still trying to understand the situation."
 
-# Sandra (Connie) left the room, and John followed her. As they reached the stairs, Connie transformed back into Sandra without any glitch effect. 
-# John observed the transformation and, with a playful lilt in his voice, said, "Okay, the illusion seems to fade after she goes away from my room, as-in-ten-ded!"
+    show john a_15
+    "John started to panic."
+    
+    show john a_4
+    john "M-Mom, it's okay. Remember, everything that's happening in my room is {b}FINE{/b}."
+
+    show john a_13
+    john "The frog is like that because I tried a levitation spell on it."
+
+    show john a_0
+    "Sandra, still bewildered, replied."
+    
+    show sandra a_8
+    sandra "Oh, {i}fine{/i}... but that's not what I mentioned! Where did you even get it?"
+
+    show sandra a_30
+    show john a_10
+    john "Ah, this is a flower from Holly's room!"
+
+    show john a_0
+    show sandra a_27
+    "Sandra looked startled."
+    
+    show sandra a_8
+    sandra "What?" 
+
+    show sandra a_30
+    show john a_14
+    john "I turned Holly's flower into a frog, then levitated it, and finally made it invisible. It's easy!"
+
+    show john a_0
+    show sandra b_5
+    "Sandra's expression turned concerned as she responded"
+    
+    show sandra b_8
+    sandra "But dear, Holly loves this flower. Why did you do such things to it? You can't just-"
+
+    show sandra b_27
+    show john a_11 
+    with hpunch
+    john "Mom, I can do anything! "
+    
+    show john a_7
+    extend "Especially when it's {b}necessary!{/b}"
+
+    show john a_16
+    show sandra b_20
+    "Sandra (Sayaka) spaced out for a moment, her thoughts processing."
+    
+    show sandra b_30
+    sandra "Yes, dear, this is {i}necessary{/i}."
+
+    show john a_15
+    show sandra b_1 at Glitch(), left, faceright
+    show sayaka a_0 at Glitch(), left, faceright
+    "With a glitch effect, she transformed back into Sandra Davis before transforming once again."
+    
+    body sandra yui nude
+    hide sayaka
+    show sandra b_6
+    with dissolve
+    "This time she changed into a naked Yui Yamashita."
+
+    show john a_2
+    "John clearly hadn't expected this. When he saw Yui's face, he flinched slightly and looked away."
+
+    show sandra b_6 at Glitch(), left, faceright
+    show sayaka a_0 at Glitch(), left, faceright
+    "Then he made an subtle movement with his hand and Yui's image started to change again."
+
+    body sandra connie nude
+    hide sayaka
+    show sandra a_0
+    show john a_0
+    with dissolve
+    "The image settled on Connie Williams this time."
+    think "Huh, I see the pattern." 
+    "Sandra (Connie) looked confused and asked:"
+
+    show sandra a_18
+    sandra "Ehm?"
+    
+    
+    show sandra a_17
+    "But John quickly dismissed her."
+    
+    show john a_22
+    john "Don't pay attention."
+
+    show john a_2
+
+    show sandra a_18
+    sandra "Son, you're scaring me. What's so important that you're not even going out to eat?"
+    
+    show sandra a_17
+    show john a_17
+    "John stood tall, his voice filled with self-confidence as he responded."
+    
+    show john a_3
+    john "Well, for the past week, I've been passionately working on a special spell. It's a healing spell that I specifically created for Suna."
+
+    show john a_0
+    show sandra a_5
+    "Connie's eyes softened as she realized."
+    
+    show sandra a_14
+    sandra "Oh, it's because of her condition. You believe you can cure her?" 
+
+    show sandra a_5
+    "The self-assured tone in John's voice was evident as he confidently replied."
+    
+    show john a_14
+    "I turned a mere house plant into an invisible flying frog. Of course, I do."
+    
+    show john a_20
+    "Just imagine the sheer joy and happiness she will experience when I bring an end to her illness."
+
+    show john a_0
+    show sandra b_0 
+    "A smile formed on Connie's face as she playfully teased."
+    
+    show sandra b_1
+    sandra "If that's the case, maybe we'll discuss your next bold move, my bravest knight of the Round Table, for winning her heart?"
+
+    show sandra b_0
+    show john a_4
+    john "Mom, why do you always bring that up?"
+    
+    show john a_7
+    john "Your son is on the brink of outshining modern medicine by discovering a cure for a disease like hers. You should be in awe!" 
+
+    show john a_2
+    show sandra b_10
+    "Sandra (Connie) raised an eyebrow and replied"
+    
+    show sandra a_14
+    show john a_15 blush
+    sandra "Oh, is that all there is to it? I must say, my son's ambitions are truly limitless!"
+    "John's face turned embarrassed as his mother teased him."
+
+    show sandra a_0
+    show john a_22 blush
+    john "Mom, it's not... Ahem... It's for..."
+    
+    show john a_2 blush
+    "John stammered, struggling to explain himself."
+
+    show sandra b_1
+    sandra "I see, Sir Lancelot, that you are ready to defeat a dragon, but not to kneel before a lady!"
+
+    show sandra b_0
+    show john a_11 blush
+    john "Mom, stoooop!"
+    
+    show john a_21 blush
+    john "You know what? You won. I'll go and eat something. Just spare me this talk."
+
+    show john a_16 blush
+    show sandra a_1 at faceleft
+    sandra "Yay! It's not so difficult after all, is it?"
+
+    show sandra a_0 at offscreenleft 
+    show john a_2 at offscreenleft
+    with easeoutleft
+    "Sandra (Connie) left the room, and John followed her."
+
+    scene black with wipeleft
+    pause 1.0
+    scene bg house_davis hallway day with wipeleft
+
+    show sandra a_0 at center, faceleft
+    show john a_2 at right, faceleft
+    with easeinright
+    body sandra sandra suit
+    show sandra b_0
+    with wipedown
+    "As they reached the stairs, Connie transformed back into Sandra without any glitch effect."
+    "John observed the transformation and, with a playful lilt in his voice, said:"
+    
+    show sandra at offscreenleft with easeoutleft
+    show john a_13
+    john "Okay, the illusion seems to fade after she goes away from my room, "
+    
+    show john a_10
+    extend "as-in-ten-ded!"
+
 # Scene's end.
 
 # Scene 1.2.1
