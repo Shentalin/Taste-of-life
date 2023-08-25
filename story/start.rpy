@@ -105,7 +105,6 @@ label tol_start:
     show sandra a_27
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
-    "As a naked Sayaka Sato entered the room, the frog croaked once again."
     
     hide text
     "Sayaka looked up at the ceiling in surprise."
@@ -114,7 +113,7 @@ label tol_start:
     body sayaka sandra suit
     show sayaka a_0 at left, faceright
     show sayaka at Glitch(), left
-    "Suddenly, with a glitch effect, she transformed into Sandra Davis, dressed casually, for a few moments before transforming back."
+    #"Suddenly, with a glitch effect, she transformed into Sandra Davis, dressed casually, for a few moments before transforming back."
     
     show john a_16 at faceright
     hide sayaka with dissolve
@@ -145,7 +144,7 @@ label tol_start:
     show sandra b_27
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
-    "The croaking sound echoed in the room again."
+    #"The croaking sound echoed in the room again."
     
     hide text
     show sandra b_28
@@ -187,7 +186,6 @@ label tol_start:
     
     show john a_4
     john "M-Mom, it's okay. Remember, everything that's happening in my room is
-    
     play sound sfx_spell
     show john a_4
     {b}FINE{/b}."
@@ -230,14 +228,13 @@ label tol_start:
     
     show john a_7
     extend "Especially when it's
-
     play sound sfx_spell
     show john a_7
     {b}necessary!{/b}"
 
     show john a_16
     show sandra b_20
-    "Sandra (Sayaka) spaced out for a moment, her thoughts processing."
+    "Sandra spaced out for a moment, her thoughts processing."
     
     show sandra b_30
     sandra "Yes, dear, this is {i}necessary{/i}."
@@ -267,7 +264,7 @@ label tol_start:
     with dissolve
     "The image settled on Connie Williams this time."
     "Huh, I see the pattern." 
-    "Sandra (Connie) looked confused and asked:"
+    "Sandra looked confused and asked:"
 
     show sandra a_18
     sandra "Ehm?"
@@ -293,7 +290,7 @@ label tol_start:
 
     show john a_0
     show sandra a_5
-    "Sandra's eyes softened as she realized."
+    "Connie's eyes softened as she realized."
     
     show sandra a_14
     sandra "Oh, it's because of her condition. You believe you can cure her?" 
@@ -366,7 +363,7 @@ label tol_start:
     body sandra sandra suit
     show sandra b_0
     with wipedown
-    "As they reached the stairs, Connie transformed back into Sandra without any glitch effect."
+    "As they reached the stairs, Connie transformed back into Sandra."
     "John observed the transformation and, with a playful lilt in his voice, said:"
     
     show sandra at offscreenleft with easeoutleft
