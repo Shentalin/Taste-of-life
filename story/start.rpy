@@ -66,7 +66,7 @@ label tol_start:
     show john a_15
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.15
-
+     #The best thing is find actuall sound of frog's croak, but before that please, can you make text CROAK without description in the box?
     "In the room, the sound of a frog croaking could be heard. "
 
     show john a_2 at faceleft
@@ -79,6 +79,7 @@ label tol_start:
     show john a_15
     show text "{color=#964B00}{size=40}THUD{/size}{/color}":
         xpos 0.3 ypos 0.05
+    #Same here
     "Suddenly, a loud smack echoed in the room, indicating that something small and soft had been forcefully slammed against the ceiling."
 
     hide text
@@ -105,7 +106,9 @@ label tol_start:
     show sandra a_27
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
-    
+    "As naked Sayaka Sato entered the room, the frog croaked once again."
+    #And here
+
     hide text
     "Sayaka looked up at the ceiling in surprise."
 
@@ -113,7 +116,7 @@ label tol_start:
     body sayaka sandra suit
     show sayaka a_0 at left, faceright
     show sayaka at Glitch(), left
-    #"Suddenly, with a glitch effect, she transformed into Sandra Davis, dressed casually, for a few moments before transforming back."
+    "Suddenly, she transformed into Sandra Davis for a few moments before transforming back."
     
     show john a_16 at faceright
     hide sayaka with dissolve
@@ -124,7 +127,7 @@ label tol_start:
 
     show john a_16
     show sandra a_29
-    "What?"
+    sandra "What?"
     
     show sandra a_30
     show john a_22 at faceleft
@@ -144,8 +147,9 @@ label tol_start:
     show sandra b_27
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
-    #"The croaking sound echoed in the room again."
-    
+    "The croaking sound echoed in the room again."
+    # Same pattern here 
+
     hide text
     show sandra b_28
     sandra "Is there a frog in your room?"
@@ -185,7 +189,8 @@ label tol_start:
     "John started to panic."
     
     show john a_4
-    john "M-Mom, it's okay. Remember, everything that's happening in my room is
+    john "M-Mom, it's okay. Remember, everything that's happening in my room is"
+    
     play sound sfx_spell
     show john a_4
     {b}FINE{/b}."
@@ -227,7 +232,7 @@ label tol_start:
     john "Mom, I can do anything! "
     
     show john a_7
-    extend "Especially when it's
+    extend "Especially when it's"
     play sound sfx_spell
     show john a_7
     {b}necessary!{/b}"
