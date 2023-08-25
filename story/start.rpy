@@ -100,24 +100,29 @@ label tol_start:
     show john a_0
     body sandra sayaka nude
     show sandra a_1 at left with easeinleft
+    "John acted normal as a nude Sayaka entered his room."
+    "He glanced at the prettiest girl in school's body, proud of his latest spell and a little turned on by the result."
 
     show john a_15
     show sandra a_27
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
-    
+    "His tough where interupted when he heard another croak coming from the celing of his room."
+
     hide text
     "Sayaka looked up at the ceiling in surprise."
 
     # Since im using Sandra with Sayaka's body, its only fair that Sayaka has Sandra's body for the glitch effect
     body sayaka sandra suit
-    show sayaka a_0 at left, faceright
-    show sayaka at Glitch(), left
-    #"Suddenly, with a glitch effect, she transformed into Sandra Davis, dressed casually, for a few moments before transforming back."
+    show sayaka a_0 behind sandra at left, faceright
+    show sandra at Glitch()
+    "Suddenly, as if in a video game, Sayaka transformed into Sandra Davis, dressed casually, for a few moments before changing back."
     
     show john a_16 at faceright
-    hide sayaka with dissolve
-    "John made another note, mumbling to himself."
+    hide sayaka
+    show sandra at left
+    with dissolve
+    "John, looking dissapointed, made another note, mumbling to himself."
     
     show john a_22
     john "Illusion spell needs a stability upgrade."
@@ -130,6 +135,7 @@ label tol_start:
     show john a_22 at faceleft
     john "It's nothing. What do you want?"
 
+    show john a_2
     show sandra b_8
     sandra "Dear, you've been sitting here all day, I'm worried you even missed lunch. Do you want me to bring you a snack?"
 
@@ -144,11 +150,11 @@ label tol_start:
     show sandra b_27
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
-    #"The croaking sound echoed in the room again."
+    "The croaking sound echoed in the room again."
     
     hide text
     show sandra b_28
-    sandra "Is there a frog in your room?"
+    sandra "Son, is there a frog in your room?"
 
     show sandra b_27
     show john a_13
@@ -185,10 +191,10 @@ label tol_start:
     "John started to panic."
     
     show john a_4
-    john "M-Mom, it's okay. Remember, everything that's happening in my room is
+    john "M-Mom, it's okay. Remember, everything that's happening in my room is"
     play sound sfx_spell
     show john a_4
-    {b}FINE{/b}."
+    extend " {b}FINE{/b}."
 
     show john a_13
     john "The frog is like that because I tried a levitation spell on it."
@@ -227,30 +233,35 @@ label tol_start:
     john "Mom, I can do anything! "
     
     show john a_7
-    extend "Especially when it's
+    extend "Especially when it's"
     play sound sfx_spell
     show john a_7
-    {b}necessary!{/b}"
+    extend " {b}necessary!{/b}"
 
     show john a_16
     show sandra b_20
     "Sandra spaced out for a moment, her thoughts processing."
     
     show sandra b_30
+    show john a_2
     sandra "Yes, dear, this is {i}necessary{/i}."
 
-    show john a_15
+    show sandra b_1
+    show john a_0
+    "John was glad to see his mind control spell also worked. It had been annoying having to explain everything to his mom again and again, every time she caught him doing somehtung unatural."
+
+    show john a_16
     show sandra b_1 at Glitch(), left, faceright
-    show sayaka a_0 at Glitch(), left, faceright
-    "With a glitch effect, she transformed back into Sandra Davis before transforming once again."
+    show sayaka a_0 behind sandra at left, faceright
+    "But then, the same annoying issue happend to John's mother as her appearanced flipped between her original self and the one John tried to superimpose on her."
     
     body sandra yui nude
     hide sayaka
-    show sandra b_6
+    show sandra b_6 at left, faceright
     with dissolve
-    "This time she changed into a naked Yui Yamashita."
-
-    show john a_2
+    show john a_15:
+        easein .2 xoffset 10
+    "This time she changed into a naked Yui."
     "John clearly hadn't expected this. When he saw Yui's face, he flinched slightly and looked away."
 
     show sandra b_6 at Glitch(), left, faceright
@@ -261,7 +272,7 @@ label tol_start:
     hide sayaka
     show sandra a_0
     show john a_0
-    with dissolve
+    with wipedown
     "The image settled on Connie Williams this time."
     "Huh, I see the pattern." 
     "Sandra looked confused and asked:"
