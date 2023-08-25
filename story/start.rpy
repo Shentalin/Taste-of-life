@@ -168,13 +168,13 @@ label tol_start:
     john "Of course, it's invisible!"
 
     show john a_2
-    "Sandra's (Sayaka's) eyes widened in surprise."
+    "Sandra's eyes widened in surprise."
     
     show sandra a_7
     sandra "Why, for the love of God, is there an invisible frog on the ceiling in my house?!"
 
     show sandra a_30
-    "After her question, Sandra (Sayaka) froze in place, as if she were listening to the sound of it."
+    "After her question, Sandra froze in place, as if she were listening to the sound of it."
     
     show sandra b_6
     sandra "What did I just say? I mean, that's, uh..."
@@ -186,7 +186,11 @@ label tol_start:
     "John started to panic."
     
     show john a_4
-    john "M-Mom, it's okay. Remember, everything that's happening in my room is {b}FINE{/b}."
+    john "M-Mom, it's okay. Remember, everything that's happening in my room is
+    
+    play sound sfx_spell
+    show john a_4
+    {b}FINE{/b}."
 
     show john a_13
     john "The frog is like that because I tried a levitation spell on it."
@@ -225,7 +229,11 @@ label tol_start:
     john "Mom, I can do anything! "
     
     show john a_7
-    extend "Especially when it's {b}necessary!{/b}"
+    extend "Especially when it's
+
+    play sound sfx_spell
+    show john a_7
+    {b}necessary!{/b}"
 
     show john a_16
     show sandra b_20
@@ -258,7 +266,7 @@ label tol_start:
     show john a_0
     with dissolve
     "The image settled on Connie Williams this time."
-    think "Huh, I see the pattern." 
+    "Huh, I see the pattern." 
     "Sandra (Connie) looked confused and asked:"
 
     show sandra a_18
@@ -285,7 +293,7 @@ label tol_start:
 
     show john a_0
     show sandra a_5
-    "Connie's eyes softened as she realized."
+    "Sandra's eyes softened as she realized."
     
     show sandra a_14
     sandra "Oh, it's because of her condition. You believe you can cure her?" 
@@ -315,7 +323,7 @@ label tol_start:
 
     show john a_2
     show sandra b_10
-    "Sandra (Connie) raised an eyebrow and replied"
+    "Sandra raised an eyebrow and replied"
     
     show sandra a_14
     show john a_15 blush
@@ -346,7 +354,7 @@ label tol_start:
     show sandra a_0 at offscreenleft 
     show john a_2 at offscreenleft
     with easeoutleft
-    "Sandra (Connie) left the room, and John followed her."
+    "Sandra left the room, and John followed her."
 
     scene black with wipeleft
     pause 1.0
