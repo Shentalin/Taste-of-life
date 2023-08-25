@@ -193,7 +193,7 @@ label tol_start:
     
     play sound sfx_spell
     show john a_4
-    {b}FINE{/b}."
+    john "{b}FINE{/b}."
 
     show john a_13
     john "The frog is like that because I tried a levitation spell on it."
@@ -235,7 +235,7 @@ label tol_start:
     extend "Especially when it's"
     play sound sfx_spell
     show john a_7
-    {b}necessary!{/b}"
+    john "{b}necessary!{/b}"
 
     show john a_16
     show sandra b_20
