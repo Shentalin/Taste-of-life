@@ -66,7 +66,7 @@ label tol_start:
     show john a_15
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.15
-
+#The best thing is find actuall sound of frog's croak, but before that please, can you make text CROAK without description in the box?
     "In the room, the sound of a frog croaking could be heard. "
 
     show john a_2 at faceleft
@@ -79,6 +79,7 @@ label tol_start:
     show john a_15
     show text "{color=#964B00}{size=40}THUD{/size}{/color}":
         xpos 0.3 ypos 0.05
+#Same here
     "Suddenly, a loud smack echoed in the room, indicating that something small and soft had been forcefully slammed against the ceiling."
 
     hide text
@@ -114,6 +115,7 @@ label tol_start:
 
     # Since im using Sandra with Sayaka's body, its only fair that Sayaka has Sandra's body for the glitch effect
     body sayaka sandra suit
+
     show sayaka a_0 behind sandra at left, faceright
     show sandra at Glitch()
     "Suddenly, as if in a video game, Sayaka transformed into Sandra Davis, dressed casually, for a few moments before changing back."
@@ -129,7 +131,7 @@ label tol_start:
 
     show john a_16
     show sandra a_29
-    "What?"
+    sandra "What?"
     
     show sandra a_30
     show john a_22 at faceleft
@@ -151,7 +153,11 @@ label tol_start:
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
     "The croaking sound echoed in the room again."
-    
+
+
+    # Same pattern here 
+
+
     hide text
     show sandra b_28
     sandra "Son, is there a frog in your room?"
@@ -301,7 +307,7 @@ label tol_start:
 
     show john a_0
     show sandra a_5
-    "Connie's eyes softened as she realized."
+    "Connie's eyes softened as she though she understood what was really going on."
     
     show sandra a_14
     sandra "Oh, it's because of her condition. You believe you can cure her?" 
@@ -375,6 +381,8 @@ label tol_start:
     show sandra b_0
     with wipedown
     "As they reached the stairs, Connie transformed back into Sandra."
+
+    show john a_0
     "John observed the transformation and, with a playful lilt in his voice, said:"
     
     show sandra at offscreenleft with easeoutleft
