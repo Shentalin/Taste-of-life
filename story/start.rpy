@@ -280,7 +280,7 @@ label tol_start:
     show john a_0
     with wipedown
     "The image settled on Connie Williams this time."
-    "Huh, I see the pattern." 
+    john "Huh, I see the pattern." 
     "Sandra looked confused and asked:"
 
     show sandra a_18
@@ -508,6 +508,10 @@ label tol_start:
 # "Any one means ANY one. The choice is made" Brock said predatorily.
 # "Okay, get the car ready" sighed Jay
 
+# Once Jay moved away from them a bit, Toshi turned to Brock and said "I bet you twenty bucks he fucks up"
+#"Sneaky little jap" Brock fake indignant "Let me bet on her punching him in the face".
+#"I'll take that bet" smirked Toshi.
+
 # Setsuna stood half-turned, listening to their conversation, occasionally glancing at the group of three. 
 # A part of her wanted to intervene and give them a warning or even kick them out of the shrine. 
 # However, as she looked in their direction, they appeared imposing and intimidating, dissuading her from confronting them. 
@@ -524,14 +528,20 @@ label tol_start:
 # If you have any other requests, I probably won't be able to help you."
 # "Did I say something wrong?" Jay asked, noticing the disappointment in Setsuna's eyes. "I can tell you're interested."
 # Setsuna sighed softly. "I just can't," she said quietly.
-# "Oh, come on," Jay persisted. "Do you really think the priest will care? There are other mikos here. The old man won't even notice."
+# "You don't worry, we're not going to do anything bad, we're just having fun" Jay increased the pressure.
+# He stood directly in front of Setsuna and put his hands on her shoulders. 
+# Setsuna shuddered, trembled, and clutched the broom so tightly that her fingers turned white
+# "You know, sometimes you have to face your fear to get a taste of life," Jay said in a confident tone of voice
+# As if in a dream, Setsuna raised her eyes open with fear and met Jay's gaze
+# "S-Sir, p-please..." she spoke quietly "I already t-told you..."
+# "Oh, come on," Jay interrupted her. "Do you really think the priest will care? There are other mikos here. The old man won't even notice."
 
 # "What won't the old man notice?" came Nemuru's voice. "I have been informed that there are three young men here disturbing the order, swearing and distracting the miko. I suppose you are one of them."
-# "Oh, sir, it's okay. We're just chatting," Jay's eyes raced, "My friends and I are waiting for our girlfriends."
-# "Then I will ask you to leave the shrine grounds" Nemuru said confidently.
+# "Oh, sir, it's okay. We're just chatting," Jay's eyes raced, "My friends and I are waiting for our girlfriends." He hurriedly removed his hands from Setsuna's shoulders and hid them behind his back.
+# "Then I will ask you to leave the shrine grounds. {b}Now{/b}" Nemuru said confidently.
 # "It's true father, they were talking loudly, but they didn't do anything wrong" Setsuna said in a very quiet and tired voice.
 # "Father? Оh..." Jay whistled
-# "On a normal day you'd get off with a warning, but today I want to minimize problems. So please leave this place." There was steel in Nemuru's usually calm, peaceful voice.
+# "On a normal day you'd get off with a warning, but today I want to minimize problems. So please {b}leave{/b} this place." There was steel in Nemuru's usually calm, peaceful voice.
 # Jay looked first at him, then at Setsuna, and said. "I see, excuse me. My friends and I were just leaving."
 
 # "What won't the old man notice?" came Nemuru's commanding voice. 
