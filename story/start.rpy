@@ -84,7 +84,7 @@ label tol_start:
 
     hide text
     show john a_16
-    think "Levitation spell needs improvement..."
+    think "Levitation spell still needs improvement..."
     
     show john a_2 at faceright
     show john at centerright with move
@@ -118,7 +118,7 @@ label tol_start:
 
     show sayaka a_0 behind sandra at left, faceright
     show sandra at Glitch()
-    "Suddenly, as if in a video game, Sayaka transformed into Sandra Davis, dressed casually, for a few moments before changing back."
+    "Suddenly, as if in a video game, Sayaka transformed into Sandra Davis for a few moments before changing back."
     
     show john a_16 at faceright
     hide sayaka
@@ -171,7 +171,7 @@ label tol_start:
     "Sandra's gaze shifted upwards towards the ceiling."
     
     show sandra a_8
-    "But there's-"
+    sandra "But there's-"
     
     show sandra a_27
     show john a_21
@@ -250,11 +250,11 @@ label tol_start:
     
     show sandra b_30
     show john a_2
-    sandra "Yes, dear, this is {i}necessary{/i}."
+    sandra "Yes, dear, this is {i}necessary{/i}..."
 
     show sandra b_1
     show john a_0
-    "John was glad to see his mind control spell also worked. It had been annoying having to explain everything to his mom again and again, every time she caught him doing somehtung unatural."
+    "John was glad to see his mind control spell also worked. It had been annoying having to explain everything to his mom again and again, every time she caught him doing somehtung unnatural."
 
     show john a_16
     show sandra b_1 at Glitch(), left, faceright
@@ -316,7 +316,7 @@ label tol_start:
     "The self-assured tone in John's voice was evident as he confidently replied."
     
     show john a_14
-    "I turned a mere house plant into an invisible flying frog. Of course, I do."
+    john "I turned a mere house plant into an invisible flying frog. Of course, I do."
     
     show john a_20
     "Just imagine the sheer joy and happiness she will experience when I bring an end to her illness."
