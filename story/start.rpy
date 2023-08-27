@@ -8,7 +8,8 @@ label tol_start:
 
 # Comment
 # This is like the episode from the original ST where John hypnotizes Sandra into thinking everything that happens in his room is normal.
-
+   define audio.croak="scenario/Taste-of-life-main/sound/croak.wav"
+   define audio.thud="scenario/Taste-of-life-main/sound/thud.wav"
 # Narrative
     nvl clear
     nvl_narrator "Half a year ago, John Davis discovered that he is the offspring of a mighty wizard's dynasty. Unfortunately for him, all he inherited was a magical book, neither less nor more."
@@ -61,9 +62,10 @@ label tol_start:
     outfit john casual
     show john a_21
     with wipeup
-    john "Not sliding, goddamnit, soaring!"
+    john {size=-5}"Not sliding, goddamnit, soaring!{/size}"
 
     show john a_15
+    play sound croak
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.15
 #The best thing is find actuall sound of frog's croak, but before that please, can you make text CROAK without description in the box?
@@ -77,6 +79,7 @@ label tol_start:
     "Invisibility spell working as intended."
 
     show john a_15
+    play sound thud
     show text "{color=#964B00}{size=40}THUD{/size}{/color}":
         xpos 0.3 ypos 0.05
 #Same here
@@ -106,6 +109,7 @@ label tol_start:
 
     show john a_15
     show sandra a_27
+    play sound croak
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
     "His tough where interupted when he heard another croak coming from the celing of his room."
@@ -127,7 +131,7 @@ label tol_start:
     "John, looking dissapointed, made another note, mumbling to himself."
     
     show john a_22
-    john "Illusion spell needs a stability upgrade."
+    john "{size=-5}Illusion spell needs a stability upgrade{/size}."
 
     show john a_16
     show sandra a_29
@@ -150,13 +154,10 @@ label tol_start:
 
     show john a_15
     show sandra b_27
+    play sound croak
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
     "The croaking sound echoed in the room again."
-
-
-    # Same pattern here 
-
 
     hide text
     show sandra b_28
@@ -200,7 +201,7 @@ label tol_start:
     john "M-Mom, it's okay. Remember, everything that's happening in my room is"
     play sound sfx_spell
     show john a_4
-    extend " {b}FINE{/b}."
+    extend " {spell}FINE{/spell}"
 
     show john a_13
     john "The frog is like that because I tried a levitation spell on it."
@@ -209,7 +210,7 @@ label tol_start:
     "Sandra, still bewildered, replied."
     
     show sandra a_8
-    sandra "Oh, {i}fine{/i}... but that's not what I mentioned! Where did you even get it?"
+    sandra "Oh, {i}{b}fine{/b}{/i}... but that's not what I mentioned! Where did you even get it?"
 
     show sandra a_30
     show john a_10
@@ -242,7 +243,7 @@ label tol_start:
     extend "Especially when it's"
     play sound sfx_spell
     show john a_7
-    extend " {b}necessary!{/b}"
+    extend " {spell}necessary!{/spell}"
 
     show john a_16
     show sandra b_20
@@ -250,7 +251,7 @@ label tol_start:
     
     show sandra b_30
     show john a_2
-    sandra "Yes, dear, this is {i}necessary{/i}..."
+    sandra "Yes, dear, this is {i}{b}necessary{/b}{/i}..."
 
     show sandra b_1
     show john a_0
@@ -274,18 +275,19 @@ label tol_start:
     show sayaka a_0 at Glitch(), left, faceright
     "Then he made an subtle movement with his hand and Yui's image started to change again."
 
+   # Here what I mention in Discord. At this moment John change illusion by his own will. Is it posible to make transformation Yui -> Connie without glitch effect but with alien morph effect? And same with transformation Connie -> Sandra
+
     body sandra connie nude
     hide sayaka
     show sandra a_0
     show john a_0
     with wipedown
     "The image settled on Connie Williams this time."
-    john "Huh, I see the pattern." 
+    john "{size=-3}Huh, I see the pattern{/size}." 
     "Sandra looked confused and asked:"
 
     show sandra a_18
     sandra "Ehm?"
-    
     
     show sandra a_17
     "But John quickly dismissed her."
@@ -316,7 +318,7 @@ label tol_start:
     "The self-assured tone in John's voice was evident as he confidently replied."
     
     show john a_14
-    john "I turned a mere house plant into an invisible flying frog. Of course, I do."
+    john "I turned a mere house plant into an invisible flying frog. Of course, {size=+10}I do{/size}."
     
     show john a_20
     "Just imagine the sheer joy and happiness she will experience when I bring an end to her illness."
@@ -341,7 +343,7 @@ label tol_start:
     
     show sandra a_14
     show john a_15 blush
-    sandra "Oh, is that all there is to it? I must say, my son's ambitions are truly limitless!"
+    sandra "Oh, is {b}that{/b} all there is to it? I must say, my son's ambitions are truly limitless!"
     "John's face turned embarrassed as his mother teased him."
 
     show sandra a_0
@@ -390,8 +392,10 @@ label tol_start:
     john "Okay, the illusion seems to fade after she goes away from my room, "
     
     show john a_10
-    extend "as-in-ten-ded!"
-
+    extend "as-"
+    extend "in-"
+    extend "ten-"
+    extend "ded!"
     jump tol_part_1_2_1
 
 # Scene 1.2.2
