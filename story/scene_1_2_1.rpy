@@ -2,6 +2,9 @@
 # Temple background. Day. Setsuna is in centre, she cleans the footpaths. There is other people at background. Setsuna hears young adults planning an all night party. She wants to reprimand them, but does not find the courage. Nemuru come in and scold them. Group don't want to conflict and leave the place. Setsuna watches them leave with a sad look. Phone ringing. It's a John, Setsuna is glad to hear him. John tells her that he will come in the evening. He has a big surprise for her. 
 
 label tol_part_1_2_1:
+    define audio.rustle="scenario/Taste-of-life-main/sound/rustle.wav"
+    define audio.crowd="scenario/Taste-of-life-main/sound/crowd.wav"
+    define audio.lock="scenario/Taste-of-life-main/sound/lock.wav"
     scene black with dissolve
     "Meanwhile, at a nearby shrine..."
     scene bg shrine exterior day
@@ -41,14 +44,15 @@ label tol_part_1_2_1:
     "Slowly, she swept the paths, occasionally pausing to lean on the broom."
     
     show setsuna b_6
+    play sound rustle
     setsuna "I didn't expect such a turnout after the news of our sanctuary's temporary closure."
     setsuna "It feels as crowded as it does on New Year's Eve. It's reassuring to see that our efforts are not in vain and that people truly want to support our sanctuary." 
     show setsuna b_4
+    play sound rustle
     "Setsuna's voice was soft as she muttered her thoughts."
     
     show setsuna b_6
     setsuna "I'm also grateful that a few other girls agreed to be miko with me today. I don't think I could have managed it alone."
-
     $tol_chris.name = "???"
     show setsuna b_7:
         faceleft
@@ -72,7 +76,7 @@ label tol_part_1_2_1:
 
     show setsuna a_1
     show tol_chris  b_3
-    tol_chris "I... I want you to... you know... love."
+    tol_chris "I... I want you to... you know... {size=-5}love{/size}"
     
     show tol_chris b_0
     show setsuna a_7
@@ -83,7 +87,7 @@ label tol_part_1_2_1:
 
     show setsuna a_7
     show tol_chris a_6
-    tol_chris "N-no, I mean, uh... I wrote a poem..."
+    tol_chris "N-no, I mean, uh... {size=-5}I wrote a poem...{/size}"
     
     show tol_chris a_3
     show setsuna a_8
@@ -95,7 +99,7 @@ label tol_part_1_2_1:
     
     show tol_chris b_6
     show setsuna b_7
-    tol_chris "Oh, I mean, you're pretty too..." 
+   tol_chris "Oh, {size=-5}I mean{/size}, {size=-10}you're p-pretty too{/size}..."
 
     show tol_chris a_2
     "Suddenly, he took in a deep breath and held it for half a minute. Setsuna looked at him with a puzzled expression."
@@ -107,13 +111,14 @@ label tol_part_1_2_1:
     "And then the guy blurted out without pause:"
     
     show tol_chris a_1
-    tol_chris "IwroteapoemforagirlIlovepleaseforetellmeifwellbetogether."
+    tol_chris "{size=+10}IwroteapoemforagirlIlovepleaseforetellmeifwellbetogether!{/size}"
     
     show tol_chris a_2
     "Then stared at the ground."
 
     show setsuna a_2
-    setsuna "Ah, so you need an omikuji!"
+    setsuna "Ah..."
+    extend "So you need an omikuji!"
     
     show setsuna a_1
     "Setsuna smiled, understanding his intent."
@@ -156,7 +161,7 @@ label tol_part_1_2_1:
 
     show setsuna a_1
     show tol_chris a_3
-    tol_chris "Thank you, Ms. miko."
+    tol_chris "{size=-5}Thank you, Ms. miko{/size}"
 
     show setsuna at offscreenright
     show tol_chris a_0 at offscreenright
@@ -187,7 +192,8 @@ label tol_part_1_2_1:
     show tol_chris a_3
     show setsuna b_7:
         linear .2 xoffset -40
-    setsuna "Wait. Don't worry, I have enough for the offering."
+    setsuna "Wait! "
+    extend "Don't worry, I have enough for the offering."
 
     show setsuna b_7 
     show tol_chris a_0 at faceright
@@ -206,10 +212,37 @@ label tol_part_1_2_1:
     
     show setsuna a_2
     setsuna "Now, take the box of tubes and shake it. When one stick falls out, tell me the number written on its tip, and I will give you a divination that corresponds to that number, without looking."
-
+      
     show setsuna a_1
-    "He follows her instructions, and after a moment, he says, \"It's four\"."
-    
+    show tol_chris a_3
+    # Please, insert here guy's shaking. I don't understand why, but "linear .2 xoffset 10" is not working as a command
+
+    "He tried to do what she was telling him."
+    tol_chris "Nothing is happening. It's stuck"
+    setsuna "It's literally can't be. Try again"
+
+    show tol_chris a_3
+    show setsuna a_7
+    tol_chris "It is. Try yourself if you don't belive me"
+    setsuna "But..."
+    extend "That's against the rules, Kami..."
+
+    show tol_chris a_6
+    "However, the boy's miserable expression made Setsuna feel sorry and she decided to help him out a little bit"
+
+    show setsuna a_5
+    "Sigh... Alright, look, you need carefully shake it. Like this"
+    play sound lock
+    "With those words, Setsuna reached out and gently touched the box."
+    "As soon as she had done so, there was a click and a stick fell out of it."
+    # Now it's obvious that the fortune telling was for her, not a third rate character.
+
+               #show setsuna a_1
+               #"He follows her instructions, and after a moment, he says, \"It's four\"."
+   
+    show tol_chris a_5
+    "He take the stick, and after a moment, he says, \"It's four\"."
+
     show setsuna a_7
     "Setsuna looks surprised at the number."
     
@@ -247,7 +280,7 @@ label tol_part_1_2_1:
     "Setsuna's voice is quiet as she responds:"
     show tol_chris a_2
     show setsuna b_8
-    setsuna "Great misfortune."
+    setsuna "{size=-5}Great misfortune{/size}"
 
     show setsuna a_4
     show tol_chris a_3
@@ -259,14 +292,14 @@ label tol_part_1_2_1:
 
     show setsuna a_8:
         easein .5 xpos .4
-    setsuna "W-Wait!" 
+    setsuna "{size=+7}W-Wait!{/size}" 
     setsuna "To prevent the bad prediction from coming true..."
     
     show setsuna a_4
     "But the boy had already disappeared amidst the crowd."
 
     show setsuna a_6 
-    setsuna "... it should be tied to a tree."
+    setsuna "{size=-3}... it should be tied to a tree.{/size}"
     
     show setsuna a_4
     "She finished her sentence, slightly quieter, and hid the paper in her pocket."
@@ -300,11 +333,11 @@ label tol_part_1_2_1:
     "Setsuna briefly recounted to Sakura what had happened, but forgot to mention that he didn't take the paper."
 
     show setsuna a_6
-    setsuna "What a gentle lad."
+    tol_mikoto "What a {i}snowflake{/i} "
 
     show tol_mikoto a_11
     show setsuna a_4
-    tol_mikoto "On the contrary, let him be happy - the deities tell to wait for a better time"
+    tol_mikoto "On the contrary, he should be grateful - the deities tell to wait for a better time"
 
     show tol_mikoto a_4
     show setsuna a_9
@@ -323,10 +356,15 @@ label tol_part_1_2_1:
 
     show tol_mikoto a_4
     show setsuna b_6
-    setsuna "You think so? Okay, thanks, I'll be off then."
+    setsuna "You think so? "
+    extend "Okay, thanks, I'll be off then."
     
     show setsuna a_9 at faceleft
     show tol_mikoto a_6
+
+    show tol_mikoto a_0
+    show setsuna at offscreenleft with easeoutleft
+    "Setsuna heard Sakura's cheerful voice behind her."
     tol_mikoto "You'll owe me a favor!"
     
     show tol_mikoto a_0
