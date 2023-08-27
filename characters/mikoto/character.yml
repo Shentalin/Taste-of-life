@@ -1,0 +1,9 @@
+default_outfit: uniform
+display_name: Mikoto
+name_color: '#435bb7'
+scale: .8
+poses:
+  a:
+    facing: right
+voice: girl
+game: "Saimin Soku Yari Kyonyuu Reijou - Cool JK Harami"

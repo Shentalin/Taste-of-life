@@ -1,0 +1,12 @@
+---
+name_color: "#316ede"
+name: chris
+voice: male
+eye_line: 0.195
+scale: 0.8
+default_outfit: uniform
+poses:
+  a:
+    facing: left
+  b:
+    facing: left
