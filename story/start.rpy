@@ -1,6 +1,7 @@
+define audio.croak="scenario/Taste-of-life-main/sound/croak.wav"
+define audio.thud="scenario/Taste-of-life-main/sound/thud.wav"
+
 label tol_start:
-
-
 # Day 1
 # Scene 1.1
 # John is in his room fooling around, or to be more precise - making new spells. Some magic stuff happening.
@@ -8,8 +9,6 @@ label tol_start:
 
 # Comment
 # This is like the episode from the original ST where John hypnotizes Sandra into thinking everything that happens in his room is normal.
-   define audio.croak="scenario/Taste-of-life-main/sound/croak.wav"
-   define audio.thud="scenario/Taste-of-life-main/sound/thud.wav"
 # Narrative
     nvl clear
     nvl_narrator "Half a year ago, John Davis discovered that he is the offspring of a mighty wizard's dynasty. Unfortunately for him, all he inherited was a magical book, neither less nor more."

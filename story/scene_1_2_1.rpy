@@ -99,7 +99,7 @@ label tol_part_1_2_1:
     
     show tol_chris b_6
     show setsuna b_7
-   tol_chris "Oh, {size=-5}I mean{/size}, {size=-10}you're p-pretty too{/size}..."
+    tol_chris "Oh, {size=-5}I mean{/size}, {size=-10}you're p-pretty too{/size}..."
 
     show tol_chris a_2
     "Suddenly, he took in a deep breath and held it for half a minute. Setsuna looked at him with a puzzled expression."
