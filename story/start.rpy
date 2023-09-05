@@ -1,6 +1,3 @@
-define audio.croak="scenario/Taste-of-life-main/sound/croak.wav"
-define audio.thud="scenario/Taste-of-life-main/sound/thud.wav"
-
 label tol_start:
 # Day 1
 # Scene 1.1
@@ -12,18 +9,19 @@ label tol_start:
 # Narrative
     nvl clear
     nvl_narrator "Half a year ago, John Davis discovered that he is the offspring of a mighty wizard's dynasty. Unfortunately for him, all he inherited was a magical book, neither less nor more."
-    nvl_narrator "As he began his experiments, he quickly realized that the book contained only a few useful spells." 
-    nvl_narrator "In his search for someone from his ancestral line who could guide him, he was unsuccessful." 
+    nvl_narrator "As he began his experiments, he quickly realized that the book contained only a few useful spells."
+    nvl_narrator "In his search for someone from his ancestral line who could guide him, he was unsuccessful."
     nvl_narrator "Determined to learn magic on his own, John decided to create his own spells. Since then, he has spent much time experimenting."
 
 # Scene begins
+    play music bgm_netherworld_shanty
     body john tol_john casual
     scene bg house_davis bedroom_john day_shut
     show john a_0 at center, faceright
     with dissolve
 
     "John stood in the middle of his room, testing the newly written spells."
-    
+
     show john:
         easein .3 ypos 1.3
     pause 1.5
@@ -38,7 +36,7 @@ label tol_start:
 
     show john a_0
     "Clearing his throat, he confidently recited his new spell. Focusing on the clothes he just laid down."
-    
+
     show john a_7
     show pentagram as pentagram behind john at Position(pos=(.77, 0.8))
     play sound sfx_spell
@@ -47,38 +45,39 @@ label tol_start:
     show john a_2
     hide pentagram with dissolve
     "At first, nothing happened, but after a few seconds, his clothes started to move."
-    
+
     show john a_15
     with hpunch
-    "They slid off the bed, crawled across the floor, and began to put themselves on John." 
-    
+    "They slid off the bed, crawled across the floor, and began to put themselves on John."
+
     outfit john topless
     show john a_16
     with wipeup
     "However, rather than being impressed, John Davis lets out a sigh of disappointment, making a note in one of his books."
-    
+
     "John mutters in frustration."
     outfit john casual
     show john a_21
     with wipeup
-    john {size=-5}"Not sliding, goddamnit, soaring!{/size}"
+    john "{size=-5}Not sliding, goddamnit, soaring!{/size}"
 
     show john a_15
-    play sound croak
+    play sound tol_sfx_croak
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.15
+
 #The best thing is find actuall sound of frog's croak, but before that please, can you make text CROAK without description in the box?
     "In the room, the sound of a frog croaking could be heard. "
 
     show john a_2 at faceleft
     hide text
     "John stared thoughtfully at the ceiling."
-    
+
     show john a_0
     "Invisibility spell working as intended."
 
     show john a_15
-    play sound thud
+    play sound tol_sfx_thud
     show text "{color=#964B00}{size=40}THUD{/size}{/color}":
         xpos 0.3 ypos 0.05
 #Same here
@@ -87,7 +86,7 @@ label tol_start:
     hide text
     show john a_16
     think "Levitation spell still needs improvement..."
-    
+
     show john a_2 at faceright
     show john at centerright with move
     "John started noting things down in his book."
@@ -108,7 +107,7 @@ label tol_start:
 
     show john a_15
     show sandra a_27
-    play sound croak
+    play sound tol_sfx_croak
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
     "His tough where interupted when he heard another croak coming from the celing of his room."
@@ -122,20 +121,20 @@ label tol_start:
     show sayaka a_0 behind sandra at left, faceright
     show sandra at Glitch()
     "Suddenly, as if in a video game, Sayaka transformed into Sandra Davis for a few moments before changing back."
-    
+
     show john a_16 at faceright
     hide sayaka
     show sandra at left
     with dissolve
     "John, looking dissapointed, made another note, mumbling to himself."
-    
+
     show john a_22
     john "{size=-5}Illusion spell needs a stability upgrade{/size}."
 
     show john a_16
     show sandra a_29
-    sandra "What?"
-    
+    sandra "{glitch=45}What?{/glitch}"
+
     show sandra a_30
     show john a_22 at faceleft
     john "It's nothing. What do you want?"
@@ -147,13 +146,26 @@ label tol_start:
     show sandra b_11
     show john a_12
     "John chuckled."
-    
+
     show john a_13
     john "Oh, come on, it's not that late. Thanks, mom, but I'm not hungry."
 
+    "{i}The next part is for your judgement, Saint. How do you think is John stay in character?{/i}"
+    "{i}These descriptions should be spread across the scene while Sandra is wearing Sayaka's illusion.{/i}"
+
+    "After saying this words John winked. As he planned, illusion catch his signal and Sayaka immideately taking sexy pose."
+    show sandra b_21
+    "She put two fingers of her right hand in her mouth, then sucked them as if they were a cock."
+    show sandra a_25
+    "She took them out of her mouth, letting a drop of saliva drip onto her breasts, then her hand slid down her chest and stomach until it touched her pussy."
+    show sandra a_24
+    "The wet fingers of her right hand slid inside while her left hand fondled her breasts."
+    show sandra b_20
+    "John noted to himself that despite this, the sight looked unnatural because all the while her voice remained calm and her head remained still."
+
     show john a_15
     show sandra b_27
-    play sound croak
+    play sound tol_sfx_croak
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
     "The croaking sound echoed in the room again."
@@ -165,51 +177,58 @@ label tol_start:
     show sandra b_27
     show john a_13
     john "Yep."
-    
-    show john a_0 
+
+    show john a_0
     show sandra a_0
     "Sandra's gaze shifted upwards towards the ceiling."
-    
+
     show sandra a_8
     sandra "But there's-"
-    
+
     show sandra a_27
-    show john a_21
+    show john a_10
     with hpunch
     john "Of course, it's invisible!"
 
-    show john a_2
+    show john a_12
     "Sandra's eyes widened in surprise."
-    
+
     show sandra a_7
+    show john a_0
     sandra "Why, for the love of God, is there an invisible frog on the ceiling in my house?!"
 
     show sandra a_30
     "After her question, Sandra froze in place, as if she were listening to the sound of it."
-    
+    stop music fadeout 1
+    play music bgm_all_this
     show sandra b_6
     sandra "What did I just say? I mean, that's, uh..."
-    
+
     show sandra b_5
     "She trailed off, still trying to understand the situation."
 
     show john a_15
     "John started to panic."
-    
+
     show john a_4
     john "M-Mom, it's okay. Remember, everything that's happening in my room is"
     play sound sfx_spell
     show john a_4
+    show pentagram as pentagram at Position(pos=(.16, 0.35))
     extend " {spell}FINE{/spell}"
-
+    hide pentagram with dissolve
     show john a_13
+
+
     john "The frog is like that because I tried a levitation spell on it."
 
     show john a_0
     "Sandra, still bewildered, replied."
-    
+
+    stop music fadeout 1
+    play music bgm_porch_swing_days_slower
     show sandra a_8
-    sandra "Oh, {i}{b}fine{/b}{/i}... but that's not what I mentioned! Where did you even get it?"
+    sandra "Oh, {bt=4}{color=#f08}fine{/color}{/bt}... but that's not what I mentioned! Where did you even get it?"
 
     show sandra a_30
     show john a_10
@@ -218,9 +237,9 @@ label tol_start:
     show john a_0
     show sandra a_27
     "Sandra looked startled."
-    
+
     show sandra a_8
-    sandra "What?" 
+    sandra "What?"
 
     show sandra a_30
     show john a_14
@@ -229,38 +248,40 @@ label tol_start:
     show john a_0
     show sandra b_5
     "Sandra's expression turned concerned as she responded"
-    
+
     show sandra b_8
     sandra "But dear, Holly loves this flower. Why did you do such things to it? You can't just-"
 
     show sandra b_27
-    show john a_11 
+    show john a_11
     with hpunch
     john "Mom, I can do anything! "
-    
+
     show john a_7
     extend "Especially when it's"
     play sound sfx_spell
     show john a_7
+    show pentagram as pentagram at Position(pos=(.16, 0.35))
     extend " {spell}necessary!{/spell}"
+    hide pentagram with dissolve
 
     show john a_16
     show sandra b_20
     "Sandra spaced out for a moment, her thoughts processing."
-    
+
     show sandra b_30
     show john a_2
-    sandra "Yes, dear, this is {i}{b}necessary{/b}{/i}..."
+    sandra "Yes, dear, this is {bt=4}{color=#f08}necessary{/color}{/bt=4}..."
 
     show sandra b_1
     show john a_0
     "John was glad to see his mind control spell also worked. It had been annoying having to explain everything to his mom again and again, every time she caught him doing somehtung unnatural."
 
-    show john a_16
+    show john a_2
     show sandra b_1 at Glitch(), left, faceright
     show sayaka a_0 behind sandra at left, faceright
     "But then, the same annoying issue happend to John's mother as her appearanced flipped between her original self and the one John tried to superimpose on her."
-    
+
     body sandra yui nude
     hide sayaka
     show sandra b_6 at left, faceright
@@ -268,29 +289,40 @@ label tol_start:
     show john a_15:
         easein .2 xoffset 10
     "This time she changed into a naked Yui."
+
+    # The frog is floating around 
+    play sound tol_sfx_thud
+    show text "{color=#964B00}{size=40}THUD{/size}{/color}":
+        xpos 0.55 ypos 0.05
+    pause .2
+    play sound tol_sfx_croak
+    show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
+        xpos 0.55 ypos 0.05
+
     "John clearly hadn't expected this. When he saw Yui's face, he flinched slightly and looked away."
+    hide text
 
-    show sandra b_6 at Glitch(), left, faceright
-    show sayaka a_0 at Glitch(), left, faceright
     "Then he made an subtle movement with his hand and Yui's image started to change again."
-
-   # Here what I mention in Discord. At this moment John change illusion by his own will. Is it posible to make transformation Yui -> Connie without glitch effect but with alien morph effect? And same with transformation Connie -> Sandra
 
     body sandra connie nude
     hide sayaka
+    show expression alien_particles(9000, 350, 1100):
+              xpos placement_of(sandra).xpos - 0.0
+              ypos 0.85
+              alien_particles_fadeinout()
     show sandra a_0
     show john a_0
     with wipedown
     "The image settled on Connie Williams this time."
-    john "{size=-3}Huh, I see the pattern{/size}." 
+    john "{size=-5}Huh, I see the pattern{/size}."
     "Sandra looked confused and asked:"
 
     show sandra a_18
     sandra "Ehm?"
-    
+
     show sandra a_17
     "But John quickly dismissed her."
-    
+
     show john a_22
     john "Don't pay attention."
 
@@ -298,48 +330,58 @@ label tol_start:
 
     show sandra a_18
     sandra "Son, you're scaring me. What's so important that you're not even going out to eat?"
-    
+
     show sandra a_17
     show john a_17
     "John stood tall, his voice filled with self-confidence as he responded."
-    
+
     show john a_3
     john "Well, for the past week, I've been passionately working on a special spell. It's a healing spell that I specifically created for Suna."
 
     show john a_0
     show sandra a_5
     "Connie's eyes softened as she though she understood what was really going on."
-    
+
     show sandra a_14
-    sandra "Oh, it's because of her condition. You believe you can cure her?" 
+    sandra "Oh, it's because of her condition. You believe you can cure her?"
 
     show sandra a_5
     "The self-assured tone in John's voice was evident as he confidently replied."
-    
+
     show john a_14
-    john "I turned a mere house plant into an invisible flying frog. Of course, {size=+10}I do{/size}."
-    
+    john "I turned a mere house plant into an invisible flying frog. Of course, {size=+7}I do{/size}."
+
+    # The frog is floating around 
+    play sound tol_sfx_thud
+    show text "{color=#964B00}{size=40}THUD{/size}{/color}":
+        xpos 0.75 ypos 0.05
+    pause .2
+    play sound tol_sfx_croak
+    show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
+        xpos 0.75 ypos 0.05
+
     show john a_20
-    "Just imagine the sheer joy and happiness she will experience when I bring an end to her illness."
+    john "Just imagine the sheer joy and happiness she will experience when I bring an end to her illness."
+    hide text
 
     show john a_0
-    show sandra b_0 
+    show sandra b_0
     "A smile formed on Connie's face as she playfully teased."
-    
+
     show sandra b_1
     sandra "If that's the case, maybe we'll discuss your next bold move, my bravest knight of the Round Table, for winning her heart?"
 
     show sandra b_0
     show john a_4
     john "Mom, why do you always bring that up?"
-    
+
     show john a_7
-    john "Your son is on the brink of outshining modern medicine by discovering a cure for a disease like hers. You should be in awe!" 
+    john "Your son is on the brink of outshining modern medicine by discovering a cure for a disease like hers. You should be in awe!"
 
     show john a_2
     show sandra b_10
     "Sandra raised an eyebrow and replied"
-    
+
     show sandra a_14
     show john a_15 blush
     sandra "Oh, is {b}that{/b} all there is to it? I must say, my son's ambitions are truly limitless!"
@@ -348,7 +390,7 @@ label tol_start:
     show sandra a_0
     show john a_22 blush
     john "Mom, it's not... Ahem... It's for..."
-    
+
     show john a_2 blush
     "John stammered, struggling to explain himself."
 
@@ -358,17 +400,28 @@ label tol_start:
     show sandra b_0
     show john a_11 blush
     john "Mom, stoooop!"
-    
+
+    # The frog is floating around 
+    play sound tol_sfx_thud
+    show text "{color=#964B00}{size=40}THUD{/size}{/color}":
+        xpos 0.95 ypos 0.05
+    pause .2
+    play sound tol_sfx_croak
+    show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
+        xpos 0.95 ypos 0.05
+
     show john a_21 blush
     john "You know what? You won. I'll go and eat something. Just spare me this talk."
 
+    hide text
     show john a_16 blush
     show sandra a_1 at faceleft
     sandra "Yay! It's not so difficult after all, is it?"
 
-    show sandra a_0 at offscreenleft 
+    show sandra a_0 at offscreenleft
     show john a_2 at offscreenleft
     with easeoutleft
+    with dissolve
     "Sandra left the room, and John followed her."
 
     scene black with wipeleft
@@ -378,82 +431,88 @@ label tol_start:
     show sandra a_0 at center, faceleft
     show john a_2 at right, faceleft
     with easeinright
+
     body sandra sandra suit
+    show expression alien_particles(3000, 220, 1000):
+              xpos placement_of(sandra).xpos - 0.0
+              ypos 0.85
+              alien_particles_fadeinout()
     show sandra b_0
     with wipedown
     "As they reached the stairs, Connie transformed back into Sandra."
 
     show john a_0
     "John observed the transformation and, with a playful lilt in his voice, said:"
-    
+
     show sandra at offscreenleft with easeoutleft
     show john a_13
     john "Okay, the illusion seems to fade after she goes away from my room, "
-    
+
     show john a_10
-    extend "as-"
-    extend "in-"
-    extend "ten-"
-    extend "ded!"
+    extend "{i}as-{/i}"
+    extend "{i}in-{/i}"
+    extend "{i}ten-{/i}"
+    extend "{i}ded!{/i}"
+    stop music fadeout 3
     jump tol_part_1_2_1
 
 # Scene 1.2.2
 
-# However, an unpleasant surprise awaited Setsuna. As she returned to the area where she had been sweeping, she noticed a group of young people nearby. 
-# They appeared to be college students, engaged in a rather boisterous discussion. Their voices filled the air, disrupting the tranquility of the shrine. 
+# However, an unpleasant surprise awaited Setsuna. As she returned to the area where she had been sweeping, she noticed a group of young people nearby.
+# They appeared to be college students, engaged in a rather boisterous discussion. Their voices filled the air, disrupting the tranquility of the shrine.
 # Setsuna sighed inwardly, knowing that her task would now be even more challenging with their presence.
 
-# "Okay, one more time, what are we doing here?" asked one of them, dressed in a leather jacket. 
-# "Honoring ancestors, spirits, and making wishes," the guy with glasses immediately responded. 
-# "Toshi, I didn't ask what we've already done here," the first one said with pressure, "I asked what we're doing here right now." 
+# "Okay, one more time, what are we doing here?" asked one of them, dressed in a leather jacket.
+# "Honoring ancestors, spirits, and making wishes," the guy with glasses immediately responded.
+# "Toshi, I didn't ask what we've already done here," the first one said with pressure, "I asked what we're doing here right now."
 # "Waiting for Samantha and Mitsuru," intervened the biggest guy in the group. "Sam wanted to see what the priest would do."
 
-# "Oh, right, ass and tits" chuckled the jacket "Wait, are they not coming right now?" 
+# "Oh, right, ass and tits" chuckled the jacket "Wait, are they not coming right now?"
 # "Probably not," Toshi replied. "Jay, what did you expect from a Shinto shrine anyway?"
 # "Honestly? That we'd finish up here real quick and go to Ron's. We still have alcohol to buy. Instead of sticking around until the local priest says a few ritual words," Jay grumbled.
 # "Well, show some respect," the big guy's voice interjected. "It's important to Mitsuru. Sam's been wanting to see some ceremony for a long time, and here's an occasion like this."
 # "Cut it," Toshi interrupted. "What do you mean we still have to buy the booze? You should have bought it yesterday!"
 
 # "I've... been busy-y," Jay stretched out the phrase.
-# "Doing what, exactly?" the big guy asked him coldly. 
+# "Doing what, exactly?" the big guy asked him coldly.
 # "Important things," Jay retorted defiantly. "Uh... a lot of important things."
-# "Dalgur's Gate 3," Toshi spelled out, staring directly into his eyes. 
+# "Dalgur's Gate 3," Toshi spelled out, staring directly into his eyes.
 # "You can't blame me!" exclaimed Jay.
 # "I can and I will," Toshi replied in a cold-blooded manner. "You know, calling you an idiot is giving you a compliment."
 # "But now I know why he's in such a hurry," the big guy grinned broadly. "He can't get any sober chick."
 
-# "Shut the fuck up Brock!" Jay hissed at him viciously. "I don't have this kind of problems. "Okay, here's an idea! Let's pick up some chicks and go to Ron's right now!"
+# "Shut the fuck up Bruce!" Jay hissed at him viciously. "I don't have this kind of problems. "Okay, here's an idea! Let's pick up some chicks and go to Ron's right now!"
 # "And what about Sam and Mitsu?" asked Toshi politely
 # "We'll figure something out on the way," Jay waved him off
-# "Alright Casanova, we're ready to go at any moment, but you owe us the ladies" Brock said still grinning.
+# "Alright Casanova, we're ready to go at any moment, but you owe us the ladies" Bruce said still grinning.
 # "Easy! Look how it's done! Show any one of them and she'll ride with us" Jay raised his head proudly
 # "That one" Toshi pointed out with a glance
 # "B-But it's..." Jay muttered uncertainly.
-# "Any one means ANY one. The choice is made" Brock said predatorily.
+# "Any one means ANY one. The choice is made" Bruce said predatorily.
 # "Okay, get the car ready" sighed Jay
 
-# Once Jay moved away from them a bit, Toshi turned to Brock and said "I bet you twenty bucks he fucks up"
-#"Sneaky little jap" Brock fake indignant "Let me bet on her punching him in the face".
+# Once Jay moved away from them a bit, Toshi turned to Bruce and said "I bet you twenty bucks he fucks up"
+#"Sneaky little jap" Bruce fake indignant "Let me bet on her punching him in the face".
 #"I'll take that bet" smirked Toshi.
 
-# Setsuna stood half-turned, listening to their conversation, occasionally glancing at the group of three. 
-# A part of her wanted to intervene and give them a warning or even kick them out of the shrine. 
-# However, as she looked in their direction, they appeared imposing and intimidating, dissuading her from confronting them. 
+# Setsuna stood half-turned, listening to their conversation, occasionally glancing at the group of three.
+# A part of her wanted to intervene and give them a warning or even kick them out of the shrine.
+# However, as she looked in their direction, they appeared imposing and intimidating, dissuading her from confronting them.
 
 # So when Jay approached her, she tightened her grip on the broom, increased her sweeping speed, and purposely avoided making eye contact with him.
 
 # "Hey, sweetie," Setsuna heard Jay's obnoxious voice calling out. "What are you doing?"
 # "Working," Setsuna replied curtly, still avoiding eye contact. Her heart raced with unease.
-# "Ha, so you're just a part-time worker, huh? Well, I've got a better offer," Jay continued. 
+# "Ha, so you're just a part-time worker, huh? Well, I've got a better offer," Jay continued.
 # "Me and the guys are heading to an awesome hangout right now, and we've got some prime seats for cool girls like you."
 # Setsuna thoughtfully mumbled under her breath, "Cool girls?"
 # "Yeah, you know, you've got that cool look," Jay remarked. "I bet you're always at the coolest parties. Trust me, this one we have lined up is gonna be amazing."
-# Setsuna's voice carried a hint of sadness as she responded, "Sir, I can sell you an omamori amulet or assist with omikuji fortune-telling. 
+# Setsuna's voice carried a hint of sadness as she responded, "Sir, I can sell you an omamori amulet or assist with omikuji fortune-telling.
 # If you have any other requests, I probably won't be able to help you."
 # "Did I say something wrong?" Jay asked, noticing the disappointment in Setsuna's eyes. "I can tell you're interested."
 # Setsuna sighed softly. "I just can't," she said quietly.
 # "You don't worry, we're not going to do anything bad, we're just having fun" Jay increased the pressure.
-# He stood directly in front of Setsuna and put his hands on her shoulders. 
+# He stood directly in front of Setsuna and put his hands on her shoulders.
 # Setsuna shuddered, trembled, and clutched the broom so tightly that her fingers turned white
 # "You know, sometimes you have to face your fear to get a taste of life," Jay said in a confident tone of voice
 # As if in a dream, Setsuna raised her eyes open with fear and met Jay's gaze
@@ -468,27 +527,27 @@ label tol_start:
 # "On a normal day you'd get off with a warning, but today I want to minimize problems. So please {b}leave{/b} this place." There was steel in Nemuru's usually calm, peaceful voice.
 # Jay looked first at him, then at Setsuna, and said. "I see, excuse me. My friends and I were just leaving."
 
-# "What won't the old man notice?" came Nemuru's commanding voice. 
+# "What won't the old man notice?" came Nemuru's commanding voice.
 # "I have been informed that there are three young men here disturbing the order, swearing, and causing a commotion around the miko. I assume you are one of them."
-# Jay's confidence wavered as he faced Nemuru's authoritative presence. "Oh, sir, it's just harmless conversation," he stuttered, avoiding eye contact. 
+# Jay's confidence wavered as he faced Nemuru's authoritative presence. "Oh, sir, it's just harmless conversation," he stuttered, avoiding eye contact.
 # "My friends and I are just waiting for our girlfriends."
 
-# Nemuru's voice held a steely determination. 
-# "On any other day, you may have received a warning," he stated firmly, his words laced with an intimidating tone. 
+# Nemuru's voice held a steely determination.
+# "On any other day, you may have received a warning," he stated firmly, his words laced with an intimidating tone.
 # "But today, I want to uphold the sanctity of this shrine. I insist that you leave this place immediately."
 
 # "Father?" Jay whistled.
-# He glanced hesitantly at Nemuru, then at Setsuna, before capitulating. 
+# He glanced hesitantly at Nemuru, then at Setsuna, before capitulating.
 # "I see. Excuse me. My friends and I were just leaving."
 
-# Jay then rejoined his friends, sharing a few words that Setsuna couldn't discern. 
+# Jay then rejoined his friends, sharing a few words that Setsuna couldn't discern.
 # With a heavy heart, Setsuna watched as the group walked away, moving farther from the shrine grounds.
 
-# "Suna, are you okay? Did he do anything to you?" Nemuru looked at his daughter with concern and care. 
-# Setsuna reassured him, "I'm fine, father. He just wanted to talk, and I was able to finish sweeping the walkways while we were conversing." 
-# Nemuru let out a sigh of relief. "That's good to hear. Now, go and get some rest. You have been working tirelessly today." 
-# Setsuna hesitated. "But, Dad, there's still so much work left to be done." 
-# Nemuru smiled reassuringly. "Don't worry, I and the other girls will take care of it. You have done more than enough. Rest is important too." 
+# "Suna, are you okay? Did he do anything to you?" Nemuru looked at his daughter with concern and care.
+# Setsuna reassured him, "I'm fine, father. He just wanted to talk, and I was able to finish sweeping the walkways while we were conversing."
+# Nemuru let out a sigh of relief. "That's good to hear. Now, go and get some rest. You have been working tirelessly today."
+# Setsuna hesitated. "But, Dad, there's still so much work left to be done."
+# Nemuru smiled reassuringly. "Don't worry, I and the other girls will take care of it. You have done more than enough. Rest is important too."
 # Setsuna expressed her gratitude to her father and slowly, pausing occasionally to catch her breath, made her way to her room.
 
 # Scene's end.
@@ -540,13 +599,13 @@ label tol_start:
 # It doesn't mean she's grounded or Nemuru controls her every move. It rather means that he will deal with the affairs himself, without his daughter
 
 # Scene 2.3
-# John's room. He takes headache pills (insert name here) and studuing the book, but find nothing. He decide do not use mana today. He thinks it's because the ritual inscriptions from yesterday. John decides to take a break and also find out how Setsuna is doing. He try to call her, but she drop the call. John think that Setsuna is still mad at him. The phone ring in John's hand. That's Kat. She suggests going to the movie, the prequel to "The Baron of the Triangles" is still on. John don't think movie will be good, but for a distraction of his current situation is agree to go. 
+# John's room. He takes headache pills (insert name here) and studuing the book, but find nothing. He decide do not use mana today. He thinks it's because the ritual inscriptions from yesterday. John decides to take a break and also find out how Setsuna is doing. He try to call her, but she drop the call. John think that Setsuna is still mad at him. The phone ring in John's hand. That's Kat. She suggests going to the movie, the prequel to "The Baron of the Triangles" is still on. John don't think movie will be good, but for a distraction of his current situation is agree to go.
 
 # Scene 2.4
 # Setsuna and Izuna meet in front of the mall. Izuna remarks that Setsuna looks very cheerful. Izuna ask what happened yesterday with surprise and Setsuna answer that it was just a prank. She again feel urge to kiss, now Izuna. But again don't pay attention. She doesn't say bad things about John, but remark his childish behavior. After that they go to the mall. They hang out there for some time. Izuna notices that Setsuna doesn't get tired like usual.
 
 # Scene 2.5
-# The girls leave the mall, move away from it a little. Izuna remembers that she left something important at the mall and returns there. Setsuna stays waiting outside. Next to her is a man with a big dog (German Shepherd, Doberman or something like that (what kind of sprite can I find). The phone rings, it's John, but the Setsuna doesn't have time to answer.Suddenly the dog tries to attack Setsuna. The beast tries to get off the leash, growls loudly, barks with all her might, tries to bite Setsuna. the owner barely restrains the dog. Setsuna is frozen with fear. At this moment, a girl unknown to her stands between her and the dog. The girl chases the dog away. The girl introduces herself as Flavia Lucca. Izuna runs up, she saw everything, but could not run in time. Setsuna and Izuna hug and Setsuna kisses Izuna on the cheek. 
+# The girls leave the mall, move away from it a little. Izuna remembers that she left something important at the mall and returns there. Setsuna stays waiting outside. Next to her is a man with a big dog (German Shepherd, Doberman or something like that (what kind of sprite can I find). The phone rings, it's John, but the Setsuna doesn't have time to answer.Suddenly the dog tries to attack Setsuna. The beast tries to get off the leash, growls loudly, barks with all her might, tries to bite Setsuna. the owner barely restrains the dog. Setsuna is frozen with fear. At this moment, a girl unknown to her stands between her and the dog. The girl chases the dog away. The girl introduces herself as Flavia Lucca. Izuna runs up, she saw everything, but could not run in time. Setsuna and Izuna hug and Setsuna kisses Izuna on the cheek.
 # Comment
 # "Is it possible to interrupt the animation of a conversation on the phone?
 # Setsuna is afraid of dogs. This will be important in the future. Sirenasu is a completely separate person, moreover, Setsuna will remain. And they will have dialogues among themselves. But some things they have in common"
@@ -560,8 +619,8 @@ label tol_start:
 # Evening. John and Kat are at the cinema. The phone rings. Call from Setsuna. Much to Kat's annoyance, John answers the phone. Setsuna greets him cheerfully. Kat doesn't like this. John asks how she feels. Setsuna reports that apparently being angry at John gives her strength. But if he wants to be forgiven, then today she is waiting for him in a nightclub. John is surprised. Setsuna explains that she has wanted to go to a place like this for a long time. But there is one condition - she is with a friend, so let John take some guy with him. And drop the call. Katrina stares at John. John invites her to go to a nightclub. Katrina sighs but agrees. But she sets a condition - let Kiyoshi go with them. John agrees.
 
 # Scene 2.8
-# "Night. In front of the doors of the nightclub. They meet. John, Kat, Setsuna, Flavia and Kiyoshi. Seen two beautiful girls Kiyoshi start being Kiyoshi. But the girls do not behave hostile, on the contrary, they accept his inept compliments.Kat is starting to get suspicious. 
-# They enter the club. They walk into the club and sit on the couch. Kiyoshi finds himself between Flavia and Setsuna. 
+# "Night. In front of the doors of the nightclub. They meet. John, Kat, Setsuna, Flavia and Kiyoshi. Seen two beautiful girls Kiyoshi start being Kiyoshi. But the girls do not behave hostile, on the contrary, they accept his inept compliments.Kat is starting to get suspicious.
+# They enter the club. They walk into the club and sit on the couch. Kiyoshi finds himself between Flavia and Setsuna.
 # They chat for a while. Kat acts somewhat cold towards Setsuna. Flavia offers to go to the dance floor. John refuses and also Kat. Kiyoshi, fascinated by the two girls, agrees. And during the dance, a plan of revenge is executed. Setsuna was supposed to give Kiyoshi a demonstrative kiss. But being in front of Kiyoshi, she felt an incredible, irresistible, brutal craving to kiss him. And she kisses him hard on the lips for about a minute. Everybody shocked."
 # Comment
 # Finally, the "kiss of the vampire". In general, this is the transfer of life. In this case, the victim feels euphoria
