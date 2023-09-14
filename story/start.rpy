@@ -4,8 +4,7 @@ label tol_start:
 # John is in his room fooling around, or to be more precise - making new spells. Some magic stuff happening.
 # Sandra comes in and asks if John wants to eat. She can bring snacks. John replies that not now, later, now he is busy with something big. Sandra asks what it is. John replies that it's a new healing spell. Sandra leaves the room. John say that he probably need use "Verba obedy" less on his family.
 
-# Comment
-# This is like the episode from the original ST where John hypnotizes Sandra into thinking everything that happens in his room is normal.
+
 # Narrative
     nvl clear
     nvl_narrator "Half a year ago, John Davis discovered that he is the offspring of a mighty wizard's dynasty. Unfortunately for him, all he inherited was a magical book, neither less nor more."
@@ -66,7 +65,6 @@ label tol_start:
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.15
 
-#The best thing is find actuall sound of frog's croak, but before that please, can you make text CROAK without description in the box?
     "In the room, the sound of a frog croaking could be heard. "
 
     show john a_2 at faceleft
@@ -104,6 +102,7 @@ label tol_start:
     show sandra a_1 at left with easeinleft
     "John acted normal as a nude Sayaka entered his room."
     "He glanced at the prettiest girl in school's body, proud of his latest spell and a little turned on by the result."
+    "He couldn't help but notice how the illusion moved in seductive ways, which both fascinated and distracted him."
 
     show john a_15
     show sandra a_27
@@ -138,30 +137,22 @@ label tol_start:
     show sandra a_30
     show john a_22 at faceleft
     john "It's nothing. What do you want?"
+    "After saying this words John winked. As he planned, illusion catch his signal and Sayaka immideately taking sexy pose."
 
     show john a_2
     show sandra b_8
     sandra "Dear, you've been sitting here all day, I'm worried you even missed lunch. Do you want me to bring you a snack?"
 
+     show sandra b_21
+    "As Sandra talked about mundane things, Sayaka's illusion continued to move provocatively, causing John to struggle to focus on the conversation."
+    "She put two fingers of her right hand in her mouth, then sucked them as if they were a cock."
+
     show sandra b_11
     show john a_12
-    "John chuckled."
+    "John chuckled nervously."
 
     show john a_13
     john "Oh, come on, it's not that late. Thanks, mom, but I'm not hungry."
-
-    "{i}The next part is for your judgement, Saint. How do you think is John stay in character?{/i}"
-    "{i}These descriptions should be spread across the scene while Sandra is wearing Sayaka's illusion.{/i}"
-
-    "After saying this words John winked. As he planned, illusion catch his signal and Sayaka immideately taking sexy pose."
-    show sandra b_21
-    "She put two fingers of her right hand in her mouth, then sucked them as if they were a cock."
-    show sandra a_25
-    "She took them out of her mouth, letting a drop of saliva drip onto her breasts, then her hand slid down her chest and stomach until it touched her pussy."
-    show sandra a_24
-    "The wet fingers of her right hand slid inside while her left hand fondled her breasts."
-    show sandra b_20
-    "John noted to himself that despite this, the sight looked unnatural because all the while her voice remained calm and her head remained still."
 
     show john a_15
     show sandra b_27
@@ -169,8 +160,11 @@ label tol_start:
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
     "The croaking sound echoed in the room again."
-
     hide text
+
+    show sandra a_25
+    "She took fingers out of her mouth, letting a drop of saliva drip onto her breasts, then her hand slid down her chest and stomach until it touched her pussy."
+    
     show sandra b_28
     sandra "Son, is there a frog in your room?"
 
@@ -192,6 +186,9 @@ label tol_start:
 
     show john a_12
     "Sandra's eyes widened in surprise."
+
+    show sandra a_24
+    "The wet fingers of his right hand slid inside her pussy, while his left hand caressed her breasts."
 
     show sandra a_7
     show john a_0
@@ -234,6 +231,9 @@ label tol_start:
     show john a_10
     john "Ah, this is a flower from Holly's room!"
 
+    show sandra a_25
+    "Sayaka bit her lip sensually and rolled her eyes slightly. Her chest began to rise more forcefully"
+
     show john a_0
     show sandra a_27
     "Sandra looked startled."
@@ -248,6 +248,8 @@ label tol_start:
     show john a_0
     show sandra b_5
     "Sandra's expression turned concerned as she responded"
+    "As John engaged in conversation with his mother, the mismatched sensuality of Sayaka's illusion and his mother's voice became increasingly conspicuous. It was as if two worlds collided in his room - the alluring illusion versus his mother's everyday talk." 
+    "The contrast was undeniably amusing but also slightly unnerving."
 
     show sandra b_8
     sandra "But dear, Holly loves this flower. Why did you do such things to it? You can't just-"
@@ -276,7 +278,13 @@ label tol_start:
     show sandra b_1
     show john a_0
     "John was glad to see his mind control spell also worked. It had been annoying having to explain everything to his mom again and again, every time she caught him doing somehtung unnatural."
+     
+    "Unable to contain his amusement, John decided to bring some harmony to the situation. He discreetly altered the illusion's behavior, toning down its provocative movements to match his mother's more conservative demeanor." 
+    "The illusion now moved in a manner that was less overtly sensual but still carried a hint of playful charm."
 
+    "With this adjustment, John found a balance that allowed him to continue the conversation without the jarring contrast between the illusion and his mother's voice." 
+    "It was a subtle but effective way to ensure that his magical experiment remained entertaining without crossing any uncomfortable boundaries." 
+    
     show john a_2
     show sandra b_1 at Glitch(), left, faceright
     show sayaka a_0 behind sandra at left, faceright
@@ -306,7 +314,7 @@ label tol_start:
 
     body sandra connie nude
     hide sayaka
-    show expression alien_particles(9000, 350, 1100):
+    show expression alien_particles(3500, 350, 1100):
               xpos placement_of(sandra).xpos - 0.0
               ypos 0.85
               alien_particles_fadeinout()
@@ -419,6 +427,9 @@ label tol_start:
     sandra "Yay! It's not so difficult after all, is it?"
 
     show sandra a_0 at offscreenleft
+    with easeoutleft
+    with dissolve
+    pause 0.3
     show john a_2 at offscreenleft
     with easeoutleft
     with dissolve
@@ -429,6 +440,7 @@ label tol_start:
     scene bg house_davis hallway day with wipeleft
 
     show sandra a_0 at center, faceleft
+    pause 0.3
     show john a_2 at right, faceleft
     with easeinright
 
