@@ -25,6 +25,7 @@ label tol_part_1_2_1:
     "Setsuna Otani, the miko of the local Shinto shrine, was extremely busy today. Her father, Nemuru, had announced that the shrine would be closed for repairs starting from tomorrow."
     "Despite the absence of holidays or special events, the temple was crowded with visitors. Consequently, Setsuna worked tirelessly, constantly moving from one task to another."
     "Adding to her burdens was her debilitating illness, making her already exhausted by noon."
+    
     #I know you are very busy, but could you please add some sprites to the background. At first I thought full sprites were needed, but now I see that just silhouettes would work even better.
 
     show setsuna b_4 at faceright
@@ -49,11 +50,11 @@ label tol_part_1_2_1:
     "Slowly, she swept the paths, occasionally pausing to lean on the broom."
 
     show setsuna b_6
-    play sound tol_sfx_rustle
+    play sound tol_sfx_rustle volume 0.5
     setsuna "I didn't expect such a turnout after the news of our sanctuary's temporary closure."
     setsuna "It feels as crowded as it does on New Year's Eve. It's reassuring to see that our efforts are not in vain and that people truly want to support our sanctuary."
     show setsuna b_4
-    play sound tol_sfx_rustle
+    play sound tol_sfx_rustle volume 0.5
     "Setsuna's voice was soft as she muttered her thoughts."
 
     show setsuna b_6
@@ -118,7 +119,7 @@ label tol_part_1_2_1:
     "And then the guy blurted out without pause:"
 
     show tol_chris a_1
-    tol_chris "{size=+10}{sc}IwroteapoemforagirlIlovepleaseforetellmeifwellbetogether!{/sc}{/size}"
+    tol_chris "{sc}IwroteapoemforagirlIlovepleaseforetellmeifwellbetogether!{/sc}"
     #What effect do you think is better? Size or chill?
 
     show tol_chris a_2
@@ -183,6 +184,7 @@ label tol_part_1_2_1:
     with wiperight
 
     play music bgm_ensolarado
+    play sound tol_sfx_crowd loop volume 0.3
     show setsuna a_1 at centerright, faceright
     show tol_chris a_0 at centerleft, faceright
     with easeinleft
@@ -244,8 +246,9 @@ label tol_part_1_2_1:
     show setsuna a_5
     setsuna "{i}Sigh{/i}... Alright, look, you need carefully shake it. Like this"
     "With those words, Setsuna reached out and gently touched the box."
-    play sound tol_sfx_lock
+    play sound tol_sfx_lock volume 0.5
     "As soon as she had done so, there was a click and a stick fell out of it."
+    play sound tol_sfx_crowd loop volume 0.3
     # Now it's obvious that the fortune telling was for her, not for a third rate character.
 
     show tol_chris a_5
@@ -290,6 +293,7 @@ label tol_part_1_2_1:
     show setsuna b_8
     stop music
     play music bgm_blue_feather
+    play sound tol_sfx_crowd volume 0.15
     setsuna "{size=-5}Great misfortune{/size}"
 
     show setsuna a_4
@@ -322,6 +326,7 @@ label tol_part_1_2_1:
     show tol_mikoto a_1 at right, faceleft with easeinright
     stop music
     play music bgm_easy_lemon
+    play sound tol_sfx_crowd volume 0.3
     tol_mikoto "Suna, what are you doing here?"
 
     show tol_mikoto a_0
@@ -384,6 +389,7 @@ label tol_part_1_2_1:
     show setsuna at offscreenleft with easeoutleft
 
     scene black with wiperight
+    stop sound fadeout 2.0
     "However, she was reluctant to go to her room due to the bustling crowd that still filled the shrine."
 
     scene bg shrine steps day
