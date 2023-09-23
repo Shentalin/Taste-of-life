@@ -1,10 +1,13 @@
-# Scene 1.2.1
+# Scene 1.2
 # Temple background. Day. Setsuna is in centre, she cleans the footpaths. There is other people at background. Setsuna hears young adults planning an all night party. She wants to reprimand them, but does not find the courage. Nemuru come in and scold them. Group don't want to conflict and leave the place. Setsuna watches them leave with a sad look. Phone ringing. It's a John, Setsuna is glad to hear him. John tells her that he will come in the evening. He has a big surprise for her.
 
-label tol_part_1_2_1:
+label tol_part_1_2:
     define audio.rustle="scenario/Taste of life/sound/rustle.wav"
     define audio.crowd="scenario/Taste of life/sound/crowd.wav"
     define audio.lock="scenario/Taste of life/sound/lock.wav"
+    define shivernig= "shivernig.rpy"
+    define shake= "shake.rpy"
+
     scene black with dissolve
     "Meanwhile, at a nearby shrine..."
     scene bg shrine exterior day
@@ -25,7 +28,6 @@ label tol_part_1_2_1:
     "Setsuna Otani, the miko of the local Shinto shrine, was extremely busy today. Her father, Nemuru, had announced that the shrine would be closed for repairs starting from tomorrow."
     "Despite the absence of holidays or special events, the temple was crowded with visitors. Consequently, Setsuna worked tirelessly, constantly moving from one task to another."
     "Adding to her burdens was her debilitating illness, making her already exhausted by noon."
-    
     #I know you are very busy, but could you please add some sprites to the background. At first I thought full sprites were needed, but now I see that just silhouettes would work even better.
 
     show setsuna b_4 at faceright
@@ -119,9 +121,9 @@ label tol_part_1_2_1:
     "And then the guy blurted out without pause:"
 
     show tol_chris a_1
+    with hpunch
     tol_chris "{sc}IwroteapoemforagirlIlovepleaseforetellmeifwellbetogether!{/sc}"
-    #What effect do you think is better? Size or chill?
-
+    
     show tol_chris a_2
     "Then stared at the ground."
 
@@ -225,13 +227,13 @@ label tol_part_1_2_1:
 
     show setsuna a_2
     setsuna "Now, take the box of tubes and shake it. When one stick falls out, tell me the number written on its tip, and I will give you a divination that corresponds to that number, without looking."
-
+    
     show setsuna a_1
-    show tol_chris a_3
-    # Please, insert here guy's shaking. I don't understand why, but "linear .2 xoffset 10" is not working as a command
+    show tol_chris a_3 at shake
 
     "He tried to do what she was telling him."
     tol_chris "Nothing is happening. It's stuck"
+    show tol_chris a_3 at reset_transform_shake_right
     setsuna "It's literally can't be. Try again"
 
     show tol_chris a_3
@@ -243,7 +245,15 @@ label tol_part_1_2_1:
     show tol_chris a_6
     "However, the boy's miserable expression made Setsuna feel sorry and she decided to help him out a little bit"
 
-    show setsuna a_5
+    show setsuna a_7:
+        zoom 1.0
+    pause 0.5
+    show setsuna a_4:
+        linear 1.0 zoom 1.01
+    pause 1.5
+    show setsuna a_6:
+        linear 1.0 zoom 1.0
+    show setsuna a_1
     setsuna "{i}Sigh{/i}... Alright, look, you need carefully shake it. Like this"
     "With those words, Setsuna reached out and gently touched the box."
     play sound tol_sfx_lock volume 0.5
@@ -405,7 +415,312 @@ label tol_part_1_2_1:
             repeat
     with dissolve
     "Instead, she decided to return to sweeping the paths in an attempt to avoid the crowded areas."
-    "Determined to find solace amidst the chaos, Setsuna focused on her task, diligently sweeping and clearing the pathways, finding a moment of peace amidst the commotion."
+    "However, an unpleasant surprise awaited Setsuna."
+    stop music
+    "As she returned, she noticed a group of young people nearby." 
+    "They appeared to be college students, engaged in a rather boisterous discussion. Their voices filled the air, disturbing the so desired tranquility of the sanctuary." 
+    "Setsuna sighed inwardly, knowing that her task would now be even more challenging with their presence."
+    
+    show setsuna at offscreenleft with easeoutleft
+    play music bgm_early_riser
 
+    $tol_henry.name = "Jacket guy"
+    outfit tol_henry casual
+
+    $tol_toshi.name = "Glasses guy"
+    outfit tol_toshi casual
+    
+    $tol_bruce.name = "Big guy"
+    outfit tol_bruce uniform_c
+
+    show tol_henry a_1 at centerleft, faceright with easeinright: 
+        xalign 0.10
+    show tol_toshi a_2 at center, faceright with easeinright
+    show tol_bruce a_7 at centerright, faceleft with easeinright:
+        xalign 0.90
+    
+    show tol_henry a_4 
+    tol_henry "Okay, one more time, what are we doing here?"
+
+    show tol_toshi a_6 at faceleft
+    show tol_bruce a_2
+    tol_toshi "Honoring ancestors, spirits, and making wishes"
+
+    show tol_henry a_6
+    tol_henry "Toshi, I didn't ask what we've already done here. " 
+    extend "I asked what we're doing here right now."
+    $tol_toshi.name = "Toshi"
+
+    show tol_bruce a_1
+    tol_bruce "Waiting for Samantha and Mitsuru. "
+    extend "Sam wanted to see what the priest would do."
+
+    show tol_henry a_0
+    tol_henry "{i}chuckle{/i}"
+    extend "...oh, right, ass and tits. "
+    extend "Wait, are they not coming right now?"
+
+    show tol_toshi a_3
+    tol_toshi "Probably not. "
+    extend "Jay, what did you expect from a Shinto shrine anyway?"
+    extend " Finish everything in fifteen minutes?"
+    
+    $tol_henry.name = "Jay"
+    show tol_henry a_5
+    tol_henry "Honestly? That we'd finish up here real quick and go to Ron's."
+    extend "We still have alcohol to buy. Instead of sticking around until the local priest says a few ritual words"
+
+    show tol_bruce a_17
+    tol_bruce "Well, show some respect. "
+    extend "It's important to Mitsuru and Sam's been wanting to see some ceremony for a long time, and here's an occasi-"
+
+    show tol_toshi a_7 with hpunch
+    tol_toshi "Cut it!"
+    extend " What do you mean we still have to buy the booze? You should have bought it yesterday!"
+
+    show tol_bruce a_8
+    show tol_henry a_2
+    tol_henry "I've... " 
+    extend "be-e-en "
+    extend "busy-y"
+
+    show tol_bruce a_18
+    tol_bruce "Doing what, exactly?"
+
+    tol_henry "Important things. "
+    extend "Uh... "
+    extend "a lot of important things."
+
+    show tol_toshi a_6
+    tol_toshi "Dalgur's Gate 3"
+    "Saying this, he looked Jay straight in the eye"
+
+    show tol_henry a_4 with hpunch
+    tol_henry "You can't blame me!"
+
+    show tol_bruce a_31
+    show tol_toshi a_4
+    tol_toshi "I can and I will."
+    extend "{i} ...sigh{/i} "
+    extend "You know, calling you an idiot is giving you a compliment."
+
+    show tol_bruce a_13
+    tol_bruce "But now I know why he's in such a hurry. "
+    extend "He can't get any sober chick!"
+
+    show tol_toshi a_2
+    show tol_bruce a_22 with hpunch
+    tol_toshi "{sc}HAhaHaHAhaHaHhaHahAHhaHaHA{/sc}" (multiple=2)
+    tol_bruce "{sc}hAHhaHAHhAHaHAHHAHAHHAhaaH{/sc}" (multiple=2)
+
+    show tol_henry a_3 with hpunch
+    tol_henry "Shut the fuck up Bruce!"
+    $tol_bruce.name = "Bruce"
+
+    show tol_bruce a_10
+    show tol_toshi a_5
+
+    show tol_henry a_6
+    tol_henry "I don't have this kind of problems. "
+    extend "Okay, here's an idea! Let's pick up some chicks and go to Ron's right now!"
+
+    tol_toshi "And what about Sam and Mitsu?"
+
+    show tol_henry a_4
+    tol_henry "We'll figure something out on the way."
+
+    show tol_bruce a_20
+    tol_bruce "Alright {i}{b}Casanova{/b}{/i}, we're ready to go at any moment, but you owe us the ladies"
+
+    show tol_henry a_1
+    tol_henry "Easy! Look how it's done! Show any one of them and she'll ride with us"
+
+    "Toshi glanced around"
+
+    show tol_toshi a_7 at faceright
+    pause 0.5
+    show tol_toshi a_7 at faceleft
+    pause 0.5
+    show tol_toshi a_7 at faceright
+    pause 0.5
+    show tol_toshi a_7 at faceleft
+
+    show tol_toshi a_2
+    tol_toshi "That one!"
+
+    show tol_henry a_5 at faceleft
+    tol_henry "B-but "
+    extend "it's a-"
+
+    show tol_bruce a_15
+    tol_bruce "Any one means " 
+    extend "{b}ANY ONE.{/b} "
+    extend "The choice is made."
+    
+    show tol_toshi a_2
+    show tol_henry a_5
+    tol_henry "Okay, get the car ready."
+    show tol_henry at offscreenleft with easeoutleft
+
+    show tol_toshi a_0 at centerleft, faceright with easeinright: 
+        xalign 0.10
+    tol_toshi "I bet you twenty he can't do it."
+
+    show tol_bruce a_20
+    tol_bruce "Good thinking, you little sneak. "
+    extend "Not accepted. It's too obvious. "
+    extend "Let me bet she'll hit him with a broom."
+
+    show tol_toshi a_2
+    tol_toshi "Ha, got it. I'll take that bet."
+
+    show tol_bruce at offscreenright
+    with easeoutleft
+    show tol_toshi at offscreenright
+    with easeoutleft
+
+
+    show setsuna a_0 at centerright, faceright:
+
+    "Setsuna stood half-turned, listening to their conversation, occasionally glancing at the group of three." 
+    "A part of her wanted to intervene and give them a warning or even kick them out of the shrine." 
+    "However, as she looked in their direction, they appeared imposing and intimidating, dissuading her from confronting them."
+
+    play music bgm_pulse_rock
+    show tol_henry a_1 at centerleft, faceleft with easeinleft: 
+        xalign 0.15
+   
+    show setsuna a_4 at centerright, faceright:
+    play sound tol_sfx_rustle volume 0.6
+    pause 1
+    play sound tol_sfx_rustle volume 0.6
+    pause 1
+    play sound tol_sfx_rustle volume 0.6
+    pause 1
+
+    "So when Jay approached her, she tightened her grip on the broom, increased her sweeping speed, and purposely avoided making eye contact with him"
+    
+    tol_henry "Hey, sweetie. "
+    extend "What are you doing?"
+
+    show setsuna a_4 at faceleft
+    think "Go away, please."
+    setsuna "Working."
+    "Politeness demanded to speak by facing him, but Setsuna still couldn't raise her eyes to look up at him"
+
+    show tol_henry a_0
+    tol_henry "Ha, so you're just a part-time worker, huh?"
+    extend " Well, I've got a better offer"
+    tol_henry "Me and the guys are heading to an awesome hangout right now, and we've got some prime seats for cool girls like you."
+
+    show setsuna a_7
+    setsuna "{size=-5}Cool girls?{/size}"
+
+    show tol_henry a_2 
+    tol_henry "Yeah, you know, you've got that cool look"
+    extend "I bet you're always at the coolest parties. Trust me, this one we have lined up is gonna be amazing!"
+
+    "Setsuna's voice carried a hint of sadness as she responded"
+    show setsuna a_4 
+    setsuna "Sir, I can sell you an omamori amulet or assist with omikuji fortune-telling. If you have any other requests, I probably won't be able to help you."
+
+    show tol_henry a_4
+    tol_henry "Did I say something wrong?"
+    extend " I can tell you're interested."
+
+    think "If you only knew."
+    setsuna "{i}Sigh{/i}...{size=-5}I just can't.{/size}"
+
+    show tol_henry a_6 at centerleft, faceleft with easeinleft:
+        xalign 0.45
+
+    tol_henry "He stood directly in front of Setsuna and put his hands on her shoulders."
+
+    show setsuna a_4 at shivering_left(duration=0.5)
+
+    "Setsuna shuddered, trembled, and clutched the broom so tightly that her fingers turned white."
+
+    show setsuna a_9
+    think "Don't touch me, please"
+    
+    show tol_henry a_0
+    tol_henry "You know, sometimes you have to face your fear to get a taste of life."
+
+    "As if in a dream, Setsuna raised her eyes open with fear and met Jay's gaze"
+    show setsuna a_4 at faceleft
+    
+    show setsuna b_7 at shivering_left(duration=0.5)
+    setsuna "S-Sir, p-please..."
+    extend "I already t-told y-"
+
+    show tol_henry a_3 with hpunch
+    tol_henry "Oh, come on! "
+    extend "Do you really think the priest will care? There are other mikos here. The old man won't even notice!"
+    
+    nemuri "What won't the old man notice?"
+    
+    play music bgm_radio_martini
+    show nemuri a_4 at left
+
+    with easeinleft
+    nemuri "I have been informed that there are three young men here disturbing the order, swearing and distracting the miko. I suppose you are one of them."
+
+    show tol_henry a_1 at faceright, with easeinleft:
+        xalign 0.4
+    
+    show setsuna b_1 at reset_transform_shivering_left
+    think "Thanks Dad"
+
+    "Jay's confidence wavered as he faced Nemuru's authoritative presence."
+    tol_henry "Oh, sir, it's just harmless conversation. "
+    extend "My friends and I are just waiting for our girlfriends."
+
+    show setsuna a_6
+    setsuna "It's true father, they were talking loudly, but they didn't do anything wrong."
+
+    show tol_henry a_4
+    tol_henry "Father? Оh..."
+    "Jay whistled"
+
+    show nemuri a_0
+    nemuri "On a normal day you'd get off with a warning, but today I want to minimize problems."
+    nemuri "So please {b}leave{/b} this place."
+    "There was steel in Nemuri's usually calm, peaceful voice."
+
+    show tol_henry a_3
+    show tol_henry a_3 at faceright
+    pause 0.5
+    show tol_henry a_3 at faceleft
+    pause 0.5
+    show tol_henry a_3 at faceright 
+    pause 0.5
+    show tol_henry a_3 at faceleft
+    pause 0.5
+    tol_henry "I see, excuse me. My friends and I were just leaving."
+    
+    show tol_henry at offscreenleft with easeoutleft
+    "Jay then rejoined his friends, sharing a few words that Setsuna couldn't discern."
+    "With a heavy heart, Setsuna watched as the group walked away, moving farther from the shrine grounds."
+
+    show nemuri a_1
+    show setsuna a_4
+    nemuri "Suna, are you okay? Did he do anything to you?"
+    "Nemuri looked at his daughter with concern and care."
+    setsuna "I'm fine, father. He just wanted to talk, and I was able to finish sweeping the walkways while we were conversing."
+
+    "Nemuru let out a sigh of relief."
+    nemuri "That's good to hear. Now, go and get some rest. You have been working tirelessly today."
+
+    show setsuna b_5
+    setsuna "But, Dad, there's still so much work left to be done."
+
+    show nemuri a_0
+    nemuri "Don't worry, I and the other girls will take care of it. You have done more than enough. Rest is important too."
+
+    "Setsuna expressed her gratitude to her father and slowly, pausing occasionally to catch her breath, made her way to her room."
+    
+    show nemuri at offscreenleft with easeoutleft
+    
+    show setsuna at offscreenleft with easeoutleft
 
     placeholder
