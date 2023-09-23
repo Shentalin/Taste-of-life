@@ -1,16 +1,22 @@
 label tol_start:
+
+    title "Good intentions"
+
 # Day 1
 # Scene 1.1
 # John is in his room fooling around, or to be more precise - making new spells. Some magic stuff happening.
 # Sandra comes in and asks if John wants to eat. She can bring snacks. John replies that not now, later, now he is busy with something big. Sandra asks what it is. John replies that it's a new healing spell. Sandra leaves the room. John say that he probably need use "Verba obedy" less on his family.
 
-
+# Comment
+# This is like the episode from the original ST where John hypnotizes Sandra into thinking everything that happens in his room is normal.
 # Narrative
     nvl clear
-    nvl_narrator "Half a year ago, John Davis discovered that he is the offspring of a mighty wizard's dynasty. Unfortunately for him, all he inherited was a magical book, neither less nor more."
-    nvl_narrator "As he began his experiments, he quickly realized that the book contained only a few useful spells."
-    nvl_narrator "In his search for someone from his ancestral line who could guide him, he was unsuccessful."
-    nvl_narrator "Determined to learn magic on his own, John decided to create his own spells. Since then, he has spent much time experimenting."
+    nvl_narrator "Half a year ago, John Davis discovered that he is the offspring of a mighty wizard's dynasty. For all this time, John, struggled to find fellow practitioners of the magical arts."
+    nvl_narrator "Fate seemed particularly unkind to him in his search for meaningful connections, guidance, and mentorship."
+    nvl_narrator "His only inheritance from his ancestors was an enigmatic magical book that held just a handful of truly useful spells, neither less nor more."
+    nvl_narrator "Despite the disheartening outcome, John's determination remained unshaken."
+    nvl_narrator"Fueled by his ambition and curiosity, he dedicated himself to understanding the intricacies of the arcane knowledge locked within his magical tome."
+    nvl_narrator"Gradually, he began to unravel the secrets of ancient spells and, experimenting tirelessly, to create a whole new repertoire of magic spells."
 
 # Scene begins
     play music bgm_netherworld_shanty
@@ -78,7 +84,6 @@ label tol_start:
     play sound tol_sfx_thud
     show text "{color=#964B00}{size=40}THUD{/size}{/color}":
         xpos 0.3 ypos 0.05
-#Same here
     "Suddenly, a loud smack echoed in the room, indicating that something small and soft had been forcefully slammed against the ceiling."
 
     hide text
@@ -137,16 +142,17 @@ label tol_start:
     show sandra a_30
     show john a_22 at faceleft
     john "It's nothing. What do you want?"
+
     "After saying this words John winked. As he planned, illusion catch his signal and Sayaka immideately taking sexy pose."
 
     show john a_2
     show sandra b_8
     sandra "Dear, you've been sitting here all day, I'm worried you even missed lunch. Do you want me to bring you a snack?"
-
-     show sandra b_21
+    
+    show sandra b_21
     "As Sandra talked about mundane things, Sayaka's illusion continued to move provocatively, causing John to struggle to focus on the conversation."
     "She put two fingers of her right hand in her mouth, then sucked them as if they were a cock."
-
+    
     show sandra b_11
     show john a_12
     "John chuckled nervously."
@@ -160,11 +166,11 @@ label tol_start:
     show text "{color=#A5A}{size=30}CROAK{/size}{/color}":
         xpos 0.3 ypos 0.05
     "The croaking sound echoed in the room again."
-    hide text
 
     show sandra a_25
     "She took fingers out of her mouth, letting a drop of saliva drip onto her breasts, then her hand slid down her chest and stomach until it touched her pussy."
-    
+
+    hide text
     show sandra b_28
     sandra "Son, is there a frog in your room?"
 
@@ -188,7 +194,7 @@ label tol_start:
     "Sandra's eyes widened in surprise."
 
     show sandra a_24
-    "The wet fingers of his right hand slid inside her pussy, while his left hand caressed her breasts."
+    "The wet fingers of her right hand slid inside while her left hand fondled her breasts."
 
     show sandra a_7
     show john a_0
@@ -248,6 +254,7 @@ label tol_start:
     show john a_0
     show sandra b_5
     "Sandra's expression turned concerned as she responded"
+
     "As John engaged in conversation with his mother, the mismatched sensuality of Sayaka's illusion and his mother's voice became increasingly conspicuous. It was as if two worlds collided in his room - the alluring illusion versus his mother's everyday talk." 
     "The contrast was undeniably amusing but also slightly unnerving."
 
@@ -278,13 +285,13 @@ label tol_start:
     show sandra b_1
     show john a_0
     "John was glad to see his mind control spell also worked. It had been annoying having to explain everything to his mom again and again, every time she caught him doing somehtung unnatural."
-     
+
     "Unable to contain his amusement, John decided to bring some harmony to the situation. He discreetly altered the illusion's behavior, toning down its provocative movements to match his mother's more conservative demeanor." 
     "The illusion now moved in a manner that was less overtly sensual but still carried a hint of playful charm."
 
     "With this adjustment, John found a balance that allowed him to continue the conversation without the jarring contrast between the illusion and his mother's voice." 
     "It was a subtle but effective way to ensure that his magical experiment remained entertaining without crossing any uncomfortable boundaries." 
-    
+
     show john a_2
     show sandra b_1 at Glitch(), left, faceright
     show sayaka a_0 behind sandra at left, faceright
@@ -298,7 +305,7 @@ label tol_start:
         easein .2 xoffset 10
     "This time she changed into a naked Yui."
 
-    # The frog is floating around 
+    # The frog is floating around
     play sound tol_sfx_thud
     show text "{color=#964B00}{size=40}THUD{/size}{/color}":
         xpos 0.55 ypos 0.05
@@ -314,10 +321,10 @@ label tol_start:
 
     body sandra connie nude
     hide sayaka
-    show expression alien_particles(3500, 350, 1100):
-              xpos placement_of(sandra).xpos - 0.0
-              ypos 0.85
-              alien_particles_fadeinout()
+    show expression alien_particles(3000, 350, 1100):
+        xpos placement_of(sandra).xpos - 0.0
+        ypos 0.85
+        alien_particles_fadeinout()
     show sandra a_0
     show john a_0
     with wipedown
@@ -359,7 +366,7 @@ label tol_start:
     show john a_14
     john "I turned a mere house plant into an invisible flying frog. Of course, {size=+7}I do{/size}."
 
-    # The frog is floating around 
+    # The frog is floating around
     play sound tol_sfx_thud
     show text "{color=#964B00}{size=40}THUD{/size}{/color}":
         xpos 0.75 ypos 0.05
@@ -409,7 +416,7 @@ label tol_start:
     show john a_11 blush
     john "Mom, stoooop!"
 
-    # The frog is floating around 
+    # The frog is floating around
     play sound tol_sfx_thud
     show text "{color=#964B00}{size=40}THUD{/size}{/color}":
         xpos 0.95 ypos 0.05
@@ -429,7 +436,7 @@ label tol_start:
     show sandra a_0 at offscreenleft
     with easeoutleft
     with dissolve
-    pause 0.3
+    pause 0.5
     show john a_2 at offscreenleft
     with easeoutleft
     with dissolve
@@ -440,15 +447,16 @@ label tol_start:
     scene bg house_davis hallway day with wipeleft
 
     show sandra a_0 at center, faceleft
-    pause 0.3
+    with easeinright
+    pause 0.5
     show john a_2 at right, faceleft
     with easeinright
 
     body sandra sandra suit
     show expression alien_particles(3000, 220, 1000):
-              xpos placement_of(sandra).xpos - 0.0
-              ypos 0.85
-              alien_particles_fadeinout()
+        xpos placement_of(sandra).xpos - 0.0
+        ypos 0.85
+        alien_particles_fadeinout()
     show sandra b_0
     with wipedown
     "As they reached the stairs, Connie transformed back into Sandra."
@@ -466,9 +474,9 @@ label tol_start:
     extend "{i}ten-{/i}"
     extend "{i}ded!{/i}"
     stop music fadeout 3
-    jump tol_part_1_2_1
+    jump tol_part_1_2
 
-# Scene 1.2.2
+# Scene 1.2
 
 # However, an unpleasant surprise awaited Setsuna. As she returned to the area where she had been sweeping, she noticed a group of young people nearby.
 # They appeared to be college students, engaged in a rather boisterous discussion. Their voices filled the air, disrupting the tranquility of the shrine.
