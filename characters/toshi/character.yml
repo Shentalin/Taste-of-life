@@ -1,0 +1,10 @@
+default_outfit: casual
+eye_line: 0.0
+name: Jimmy
+name_color: '#B38B7E'
+poses:
+  a:
+    image_height: 720
+    facing: right
+scale: 0.92
+voice: male
