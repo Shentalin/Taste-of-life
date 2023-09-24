@@ -1,0 +1,10 @@
+default_outfit: uniform
+eye_line: 0.0
+name: Caleb
+name_color: '#86786A'
+poses:
+  a:
+    image_height: 720
+    facing: right
+scale: 0.91
+voice: male
